@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "start": {
+      "RU": "Главная",
+      "EN": "Start"
+    },
+    "about-me": {
+      "RU": "Обо мне",
+      "EN": "About me"
+    }
+  }
+}
