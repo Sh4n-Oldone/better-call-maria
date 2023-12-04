@@ -372,6 +372,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.55.0.tgz#b721d52060f369aa259cf97392403cb9ce892ec6"
   integrity sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
 
+"@fontsource-variable/noto-sans-symbols@^5.0.15":
+  version "5.0.15"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/noto-sans-symbols/-/noto-sans-symbols-5.0.15.tgz#4d695d9472ebb8bd04e018de5d69106c9783c90a"
+  integrity sha512-z2gPTTqFtEQATYET/sNyMqoCavQg8rghNXTm2KM/TAPJ4poVGfmTqTnOMz/5gaAecCIlDz0u7aCIMxTztfeJvQ==
+
+"@fontsource/inter@^5.0.15":
+  version "5.0.15"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.0.15.tgz#c01d160cd02bde1a4ce09f2c38b2063b66caf870"
+  integrity sha512-/IoWYEXl8lqJEx50JqNPT+bI4VNwxb/bg2oOfvG8PiEsDsmHRFvWBVHlohBNn1+QdBf+KbAjU/gb4vlGOSsVWw==
+
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.13.tgz#075dc9684f40a531d9b26b0822153c1e832ee297"

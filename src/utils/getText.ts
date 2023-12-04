@@ -8,7 +8,7 @@ export const getNavText = (lang: Langs, route: RouteNames) => navigationObj[rout
 export const getNavLinks = (lang: Langs) => {
   const links = Object.keys(navigationObj).map((route) => ({
     name: navigationObj[route][lang],
-    path: `/${route}`,
+    path: `/#${route}`,
   }))
   return links
 }

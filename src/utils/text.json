@@ -1,12 +1,24 @@
 {
   "navigation": {
     "start": {
-      "RU": "Главная",
-      "EN": "Start"
+      "RU": "Старт",
+      "EN": "Start here"
     },
     "about-me": {
       "RU": "Обо мне",
       "EN": "About me"
+    },
+    "skills": {
+      "RU": "Навыки",
+      "EN": "Skills"
+    },
+    "cases": {
+      "RU": "Кейсы",
+      "EN": "Cases"
+    },
+    "projects": {
+      "RU": "Другие проекты",
+      "EN": "Other projects"
     }
   }
 }

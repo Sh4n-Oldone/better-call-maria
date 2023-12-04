@@ -1,7 +1,7 @@
 import { HeaderHeight } from 'constants'
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   position: fixed;
   top: 0;
   background-color: #000;

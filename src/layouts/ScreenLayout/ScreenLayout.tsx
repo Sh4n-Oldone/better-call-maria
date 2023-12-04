@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
-import { Header } from 'components'
+import {
+  Header,
+  ContentBody,
+  Footer,
+} from 'components'
 import { HeaderHeight } from 'constants'
-import { RouteNames } from 'types'
 
 type Props =  {
   children?: React.ReactNode
 }
 
 const Wrapper = styled.section`
-  font-family: Montserrat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,23 +32,27 @@ const Content = styled.div`
   height: 100%;
 `
 
-export const ScreenLayout: React.FC<Props> = ({ children }) => {
+const ContentSwitcher: React.FC<Props> = ({ children }) => {
   const isMain = useLocation().pathname === '/'
-  const navigate = useNavigate()
 
-  useEffect(() => {
-    if (isMain) {
-      navigate(`/${RouteNames.START}`)
-    }
-  
-  }, [isMain])
-  
+  if (isMain) return (
+    <ContentContainer>
+      <Header />
+      <ContentBody />
+      <Footer />
+    </ContentContainer>
+  )
+
   return (
-  <Wrapper>
     <ContentContainer>
       <Header />
       <Content>{children}</Content>
     </ContentContainer>
+  )
+}
+
+export const ScreenLayout: React.FC<Props> = ({ children }) => (
+  <Wrapper>
+    <ContentSwitcher children={children} />
   </Wrapper>
 )
-}
