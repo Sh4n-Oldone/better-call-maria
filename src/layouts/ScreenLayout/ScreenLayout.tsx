@@ -12,12 +12,12 @@ type Props =  {
   children?: React.ReactNode
 }
 
-const Wrapper = styled.section`
+const Wrapper = styled.section<{ scrollbarSize: number }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: calc(100vw - ${({ scrollbarSize }) => scrollbarSize}px);
 `
 const ContentContainer = styled.div`
   max-width: 1920px;
@@ -47,12 +47,17 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
     <ContentContainer>
       <Header />
       <Content>{children}</Content>
+      <Footer />
     </ContentContainer>
   )
 }
 
-export const ScreenLayout: React.FC<Props> = ({ children }) => (
-  <Wrapper>
-    <ContentSwitcher children={children} />
-  </Wrapper>
-)
+export const ScreenLayout: React.FC<Props> = ({ children }) => {
+  const scrollbarSize = window.innerWidth - document.documentElement.clientWidth
+  
+  return (
+    <Wrapper scrollbarSize={scrollbarSize}>
+      <ContentSwitcher children={children} />
+    </Wrapper>
+  )
+}

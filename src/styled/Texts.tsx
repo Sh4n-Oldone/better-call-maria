@@ -4,7 +4,7 @@ import { colorScheme } from 'src/shared'
 export const DefaultText = styled.p`
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  color: ${colorScheme.text.mainBlack};
+  color: ${colorScheme.palette.black};
 `
 
 export const MediumText = styled(DefaultText)`
@@ -16,7 +16,9 @@ export const HeadingText = styled.h1`
   font-weight: 900;
   font-size: 52px;
   line-height: 62.4px;
-  color: ${colorScheme.text.mainBlack};
+  color: ${colorScheme.palette.black};
+  margin: 0;
+  padding: 0;
 `
 
 export const SecondaryHeadingText = styled.h2`
@@ -24,5 +26,5 @@ export const SecondaryHeadingText = styled.h2`
   font-weight: 500;
   font-size: 42px;
   line-height: 62.4px;
-  color: ${colorScheme.text.lightBlack};
+  color: ${colorScheme.grayFamily.darkGray};
 `

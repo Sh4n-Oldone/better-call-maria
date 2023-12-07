@@ -20,5 +20,19 @@
       "RU": "Другие проекты",
       "EN": "Other projects"
     }
+  },
+  "start": {
+    "title": {
+      "RU": "Помогаю продуктам становиться лучшими на рынке",
+      "EN": "Helping products become the best on the market"
+    },
+    "subtitle": {
+      "RU": "Приложения, сайты, CRM-системы, админ-панели, дизайн-системы, документация, roadmap, MVP и многое другое, в чем я могу быть полезна вашему продукту",
+      "EN": "Applications, websites, CRM-systems, admin panels, design systems, documentation, roadmap, MVP and much more, in which I can be useful to your product"
+    },
+    "callMeButton": {
+      "RU": "Связаться",
+      "EN": "Contact me"
+    }
   }
 }

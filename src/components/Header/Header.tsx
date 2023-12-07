@@ -3,6 +3,7 @@ import { Navigation } from './components'
 import {
   Wrapper,
   LogoContainer,
+  RightBlock,
   SwitchContainer,
   ContactMeButton,
 } from './styled'
@@ -12,8 +13,10 @@ export const Header: React.FC = () => {
     <Wrapper>
       <LogoContainer>Logo</LogoContainer>
       <Navigation />
-      <SwitchContainer>Switch</SwitchContainer>
-      <ContactMeButton>Contact me</ContactMeButton>
+      <RightBlock>
+        <SwitchContainer>Switch</SwitchContainer>
+        <ContactMeButton>Contact me</ContactMeButton>
+      </RightBlock>
     </Wrapper>
   )
 }

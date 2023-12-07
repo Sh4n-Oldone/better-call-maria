@@ -1,1 +1,3 @@
-export const HeaderHeight = 60
+export const HeaderHeight = 70
+
+export const SmallestScreenWidth = 780
