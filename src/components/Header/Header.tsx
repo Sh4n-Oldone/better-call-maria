@@ -6,6 +6,7 @@ import {
 } from './components'
 import {
   Wrapper,
+  HeaderContentWrapper,
   LogoContainer,
   RightBlock,
   ButtonContainer,
@@ -14,16 +15,18 @@ import {
 export const Header: React.FC = () => {
   return (
     <Wrapper>
-      <LogoContainer>Logo</LogoContainer>
-      <Navigation />
-      <RightBlock>
-        <ButtonContainer>
-          <LangButton />
-        </ButtonContainer>
-        <ButtonContainer>
-          <ContactMeButton />
-        </ButtonContainer>
-      </RightBlock>
+      <HeaderContentWrapper>
+        <LogoContainer>Logo</LogoContainer>
+        <Navigation />
+        <RightBlock>
+          <ButtonContainer>
+            <LangButton />
+          </ButtonContainer>
+          <ButtonContainer>
+            <ContactMeButton />
+          </ButtonContainer>
+        </RightBlock>
+      </HeaderContentWrapper>
     </Wrapper>
   )
 }

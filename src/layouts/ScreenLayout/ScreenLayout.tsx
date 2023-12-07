@@ -16,10 +16,15 @@ const Wrapper = styled.section<{ size: number }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
   min-width: calc(100vw - ${({ size }) => size}px);
 `
 const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   max-width: 1920px;
   padding-top: ${HeaderHeight}px;
 `
