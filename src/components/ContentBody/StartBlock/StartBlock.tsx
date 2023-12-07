@@ -32,7 +32,9 @@ const Checkers = styled.div`
 
   background-color: transparent;
   opacity: 0.2;
-  background-image: linear-gradient(rgba(105, 105, 105, 0.3) 1px, transparent 1px), linear-gradient(to right, rgba(105, 105, 105, 0.3) 1px, transparent 1px);
+  background-image: 
+    linear-gradient(rgba(105, 105, 105, 0.3) 1px, transparent 1px),
+    linear-gradient(to right, rgba(105, 105, 105, 0.3) 1px, transparent 1px);
   background-size: 20px 20px;
   background-position: top 20px left 20px;
   box-shadow: inset 0px 60px 50px 50px ${colorScheme.palette.gray};

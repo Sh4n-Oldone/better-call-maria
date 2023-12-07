@@ -16,7 +16,6 @@ type Props =  {
 const Wrapper = styled.div<{ size: number }>`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
   min-width: calc(100vw - ${({ size }) => size}px);

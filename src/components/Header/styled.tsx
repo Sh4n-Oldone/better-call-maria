@@ -6,8 +6,6 @@ export const Wrapper = styled.header`
   position: fixed;
   left: 0;
   top: 0;
-  background-color: ${colorScheme.palette.white};
-  color: ${colorScheme.palette.black};
   display: flex;
   justify-content: center;
   height: 100%;
@@ -15,6 +13,9 @@ export const Wrapper = styled.header`
   width: 100%;
   gap: 20px;
   z-index: 999;
+  border-radius: 0 0 12px 12px;
+  background-color: ${colorScheme.palette.white};
+  color: ${colorScheme.palette.black};
 `
 export const HeaderContentWrapper = styled.div`
   display: flex;

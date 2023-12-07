@@ -17,7 +17,8 @@ const Button = styled.button`
   color: ${colorScheme.palette.white};
   border: 1px solid ${colorScheme.grayFamily.lightGray};
   border-radius: 16px;
-  background: linear-gradient(180deg, ${colorScheme.gradients.blackToBlue.start} 0%, ${colorScheme.gradients.blackToBlue.end} 100%);
+  background:
+    linear-gradient(180deg, ${colorScheme.gradients.blackToBlue.start} 0%, ${colorScheme.gradients.blackToBlue.end} 100%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 
