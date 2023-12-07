@@ -6,7 +6,7 @@ import { MyTitle, MySubTitle } from './MyTitle'
 import { CallMeButton } from './CallMeButton'
 import { Workspace } from './Workspace'
 
-const MainWrapper = styled.div`
+const MainWrapper = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -49,7 +49,7 @@ const ContentContainer = styled.div`
 
 export const StartBlock: React.FC = () => {
   return (
-    <MainWrapper>
+    <MainWrapper id='start'>
       <MainContainerWrapper>
         <Checkers />
         <ContentContainer>

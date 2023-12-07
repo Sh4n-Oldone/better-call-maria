@@ -5,6 +5,7 @@ import {
   Header,
   ContentBody,
   Footer,
+  ScrollToAnchor,
 } from 'components'
 import { HeaderHeight } from 'constants'
 
@@ -12,7 +13,7 @@ type Props =  {
   children?: React.ReactNode
 }
 
-const Wrapper = styled.section<{ size: number }>`
+const Wrapper = styled.div<{ size: number }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,6 +67,7 @@ export const ScreenLayout: React.FC<Props> = ({ children }) => {
   
   return (
     <Wrapper size={scrollbarSize}>
+      <ScrollToAnchor />
       <ContentSwitcher children={children} />
     </Wrapper>
   )
