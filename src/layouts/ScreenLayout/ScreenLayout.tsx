@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import {
@@ -12,12 +12,12 @@ type Props =  {
   children?: React.ReactNode
 }
 
-const Wrapper = styled.section<{ scrollbarSize: number }>`
+const Wrapper = styled.section<{ size: number }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  min-width: calc(100vw - ${({ scrollbarSize }) => scrollbarSize}px);
+  min-width: calc(100vw - ${({ size }) => size}px);
 `
 const ContentContainer = styled.div`
   max-width: 1920px;
@@ -53,10 +53,14 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
 }
 
 export const ScreenLayout: React.FC<Props> = ({ children }) => {
-  const scrollbarSize = window.innerWidth - document.documentElement.clientWidth
+  const [scrollbarSize, setScrollbarSize] = useState(0)
+
+  useEffect(() => {
+    setScrollbarSize(window.innerWidth - document.documentElement.clientWidth)
+  }, [document.documentElement.clientWidth])
   
   return (
-    <Wrapper scrollbarSize={scrollbarSize}>
+    <Wrapper size={scrollbarSize}>
       <ContentSwitcher children={children} />
     </Wrapper>
   )
