@@ -1,11 +1,14 @@
 import React from 'react'
-import { Navigation } from './components'
+import {
+  Navigation,
+  LangButton,
+  ContactMeButton,
+} from './components'
 import {
   Wrapper,
   LogoContainer,
   RightBlock,
-  SwitchContainer,
-  ContactMeButton,
+  ButtonContainer,
 } from './styled'
 
 export const Header: React.FC = () => {
@@ -14,8 +17,12 @@ export const Header: React.FC = () => {
       <LogoContainer>Logo</LogoContainer>
       <Navigation />
       <RightBlock>
-        <SwitchContainer>Switch</SwitchContainer>
-        <ContactMeButton>Contact me</ContactMeButton>
+        <ButtonContainer>
+          <LangButton />
+        </ButtonContainer>
+        <ButtonContainer>
+          <ContactMeButton />
+        </ButtonContainer>
       </RightBlock>
     </Wrapper>
   )

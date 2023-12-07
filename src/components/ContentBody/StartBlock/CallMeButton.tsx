@@ -24,6 +24,10 @@ const Button = styled.button`
   &:hover {
     border: 1px solid ${colorScheme.grayFamily.lightGray};
   }
+
+  &:focus {
+    outline: 0;
+  }
 `
 
 export const CallMeButton: React.FC = () => {

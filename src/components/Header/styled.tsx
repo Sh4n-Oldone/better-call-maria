@@ -27,16 +27,10 @@ export const RightBlock = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
+  gap: 10px;
 `
-export const SwitchContainer = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
-export const ContactMeButton = styled.button`
-  background: none;
-  border: none;
-  color: ${colorScheme.palette.black};
-  font-size: 16px;
-  cursor: pointer;
 `
