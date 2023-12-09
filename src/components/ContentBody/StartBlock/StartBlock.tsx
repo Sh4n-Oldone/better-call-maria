@@ -1,6 +1,6 @@
 import React from 'react'
-import { colorScheme } from 'shared'
 import styled from 'styled-components'
+import { colorScheme } from 'shared'
 import { IdeaToProfit } from './IdeaToProfit'
 import { MyTitle, MySubTitle } from './MyTitle'
 import { CallMeButton } from './CallMeButton'
@@ -19,7 +19,6 @@ const MainContainerWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 90%;
-  /* height: 800px; */
   margin-top: auto;
 `
 const Checkers = styled.div`

@@ -26,5 +26,6 @@ export const SecondaryHeadingText = styled.h2`
   font-weight: 500;
   font-size: 42px;
   line-height: 62.4px;
+  letter-spacing: 0.42px;
   color: ${colorScheme.grayFamily.darkGray};
 `

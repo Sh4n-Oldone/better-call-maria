@@ -63,6 +63,20 @@ export const ScreenLayout: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     setScrollbarSize(window.innerWidth - document.documentElement.clientWidth)
   }, [document.documentElement.clientWidth])
+
+  // useEffect(() => {
+  //   const handleResize = () => setScrollbarSize(window.innerWidth - document.documentElement.clientWidth)
+
+  //   window.addEventListener('resize', handleResize)
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize)
+  //   }
+  // }, [window.innerWidth])
+
+  console.log('scrollbarSize', scrollbarSize)
+  console.log('window.innerWidth', window.innerWidth)
+  console.log('clientWidth', document.documentElement.clientWidth)
   
   return (
     <Wrapper size={scrollbarSize}>

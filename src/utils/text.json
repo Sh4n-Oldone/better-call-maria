@@ -34,5 +34,19 @@
       "RU": "Связаться",
       "EN": "Contact me"
     }
+  },
+  "aboutMe": {
+    "title": {
+      "RU": "Обо мне",
+      "EN": "About me"
+    },
+    "hello": {
+      "RU": "Привет! Меня зовут Авраменко Мария! Я - лид дизайнер.",
+      "EN": "Hello! My name is Avramenko Maria! I am a lead designer."
+    },
+    "lastYears": {
+      "RU": "Последние два года я управляла несколькими командами дизайнеров и выстраивала дизайн-процессы в компании.",
+      "EN": "For the past two years, I have been managing several teams of designers and building design processes in the company."
+    }
   }
 }

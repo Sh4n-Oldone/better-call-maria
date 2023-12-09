@@ -5,8 +5,6 @@ export const ScrollToAnchor: React.FC = () => {
   const location = useLocation()
   const lastHash = useRef('')
 
-  console.log('location', location)
-
   useEffect(() => {
     if (location.hash) {
       lastHash.current = location.hash.slice(1)
