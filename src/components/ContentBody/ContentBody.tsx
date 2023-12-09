@@ -40,7 +40,7 @@ const BackgroundWrapper = styled.section<{ width: number }>`
 `
 
 export const ContentBody: React.FC = () => {
-  const [width, setWidth] = useState(0)
+  const [width, setWidth] = useState(window.innerWidth ?? 0)
   
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth ?? 2)
