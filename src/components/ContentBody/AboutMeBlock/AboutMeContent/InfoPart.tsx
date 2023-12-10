@@ -82,8 +82,6 @@ const StyledAccordionPanel = styled(AccordionPanel)`
   background-color: #FFF;
   border-radius: 12px;
 `
-const StyledTextContentContainer = styled(TextContentContainer)`
-`
 
 export const InfoPart: React.FC = () => {
   const [openItem, setOpenItem] = useState<number>(0)
@@ -119,11 +117,11 @@ export const InfoPart: React.FC = () => {
               </span>
               <StyledAccordionPanel pb={4}>
                 {item.content.map((text) => (
-                  <StyledTextContentContainer key={text}>
+                  <TextContentContainer key={text}>
                     <Box as="span" textAlign='left'>
                       {text}
                     </Box>
-                  </StyledTextContentContainer>
+                  </TextContentContainer>
                 ))}
               </StyledAccordionPanel>
             </StyledAccordionItem>
