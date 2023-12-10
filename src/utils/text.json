@@ -47,6 +47,64 @@
     "lastYears": {
       "RU": "Последние два года я управляла несколькими командами дизайнеров и выстраивала дизайн-процессы в компании.",
       "EN": "For the past two years, I have been managing several teams of designers and building design processes in the company."
-    }
+    },
+    "accordion": [
+      {
+        "title": {
+          "RU": "01. Про опыт работы",
+          "EN": "01. About work experience"
+        },
+        "content": [{
+          "RU": "Продуктовые дизайнер с техническим образованием с более чем 5-летним опытом работы в сфере EdTech, P2P, FinTech, E-commerce,  B2B и B2C платформ и приложений.",
+          "EN": "Product designer with a technical education with more than 5 years of experience in the field of EdTech, P2P, FinTech, E-commerce, B2B and B2C platforms and applications."
+        }]
+      },
+      {
+        "title": {
+          "RU": "02. Про дизайн-культуру",
+          "EN": "02. About design culture"
+        },
+        "content": [{
+          "RU": "Я собрала карту компетенций лида-дизайнера, исходя из собственного опыта. На мой взгляд, она наиболее точно отображает не столько дизайн-процесс, сколько комплексный подход к развитию дизайн-культуры в компании.",
+          "EN": "I have collected a map of the competencies of the lead designer, based on my own experience. In my opinion, it most accurately reflects not so much the design process as a comprehensive approach to the development of design culture in a company."
+        }]
+      },
+      {
+        "title": {
+          "RU": "03. Почему дизайн?",
+          "EN": "03. Why design?"
+        },
+        "content": [
+          {
+            "RU": "Всю свою учебу и карьеру впоследствии мне приходилось сталкиваться со сложными и высоконагруженными интерфейсами. Еще в университете появилась идея реализовать приложение для имитации работы квантовых цепей.",
+            "EN": "Throughout my studies and career, I had to deal with complex and high-load interfaces. It was in the university that the idea arose to implement an application for simulating the operation of quantum circuits."
+          },
+          {
+            "RU": "С тех пор мне было интересно найти способы, которые облегчат пользователям взаимодействие с продуктами.",
+            "EN": "Since then, I have been interested in finding ways to make it easier for users to interact with products."
+          }
+        ]
+      },
+      {
+        "title": {
+          "RU": "04. Любимые дизайнеры и студии",
+          "EN": "04. Favorite designers and studios"
+        },
+        "content": [{
+          "RU": "Студия Олега Чулакова (@chulakovstudio), Глеб Кузнецов (@glebich), не тот самый, а другой Артемий Лебедев (@artlebedev.ui) и его проект Лемма студия (@lemma.studio), Марио Митков (@mitkow_1).",
+          "EN": "Oleg Chulakov's studio (@chulakovstudio), Gleb Kuznetsov (@glebich), not that one, but another Artemy Lebedev (@artlebedev.ui) and his project Lemma studio (@lemma.studio), Mario Mitkov (@mitkow_1)."
+        }]
+      },
+      {
+        "title": {
+          "RU": "05. Главный принцип в работе",
+          "EN": "05. The main principle at work"
+        },
+        "content": [{
+          "RU": "Дизайним для людей: довольный лояльный пользователь всегда принесет больше пользы бизнесу, потому что будет рад заплатить за экономию времени и нервов.",
+          "EN": "Design for people: a satisfied loyal user will always bring more benefits to the business, because he will be happy to pay for saving time and nerves."
+        }]
+      }
+    ]
   }
 }
