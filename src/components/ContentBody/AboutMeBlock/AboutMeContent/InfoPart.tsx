@@ -50,9 +50,17 @@ const StyledAccordionItem = styled(AccordionItem)<{ isActive: boolean }>`
     outline: none;
   }
 `
+const ControllableWrapper = styled.span<{ isActive: boolean }>`
+  > button:hover {
+    ${({ isActive }) => isActive && `
+      background-color: #FFF;
+      cursor: default;
+    `}
+  }
+`
 const StyledAccordionButton = styled(AccordionButton)<{ isActive: boolean }>`
   &:hover {
-    ${({ isActive }) => isActive && 'background: #FFF;'}
+    ${({ isActive }) => isActive && 'background-color: #FFF;'} // does not works
     border-color: transparent;
   }
 
@@ -107,14 +115,17 @@ export const InfoPart: React.FC = () => {
                   : `1px solid ${colorScheme.grayFamily.gray_2}`
                 }
             >
-              <span>
-                <StyledAccordionButton padding={'10px 15px'} isActive={index === openItem} _hover={'background: #FFF'}>
+              <ControllableWrapper isActive={index === openItem}>
+                <StyledAccordionButton
+                  padding={'10px 15px'}
+                  isActive={index === openItem}
+                >
                   <StyledBox isActive={index === openItem}>
                     {item.title}
                   </StyledBox>
                   <AccordionIcon />
                 </StyledAccordionButton>
-              </span>
+              </ControllableWrapper>
               <StyledAccordionPanel pb={4}>
                 {item.content.map((text) => (
                   <TextContentContainer key={text}>
