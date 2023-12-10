@@ -24,7 +24,9 @@ export const AboutMeBlock: React.FC = () => {
 
   return (
     <MainWrapper id='about-me'>
-      <SecondaryHeadingText>{getAboutMeText(currLang, 'title')}</SecondaryHeadingText>
+      <SecondaryHeadingText>
+        {getAboutMeText(currLang, 'title')}
+      </SecondaryHeadingText>
       <AboutMeContent />
     </MainWrapper>
   )

@@ -106,5 +106,33 @@
         }]
       }
     ]
+  },
+  "skills": {
+    "title": {
+      "RU": "Про навыки и подход к дизайну",
+      "EN": "About skills and approach to design"
+    },
+    "subtitle": {
+      "RU": "На мой взгляд, любой навык невозможно оценить точечно, всегда нужно подходить комплексно. Я дифференцирую свой опыт на четыре главных составляющих.",
+      "EN": "In my opinion, any skill cannot be assessed pointwise, you always need to approach it comprehensively. I differentiate my experience into four main components."
+    },
+    "tabs": [
+      {
+        "RU": "Методы",
+        "EN": "Methods"
+      },
+      {
+        "RU": "Навыки",
+        "EN": "Skills"
+      },
+      {
+        "RU": "Менеджмент",
+        "EN": "Management"
+      },
+      {
+        "RU": "Инструменты",
+        "EN": "Tools"
+      }
+    ]
   }
 }

@@ -33,8 +33,9 @@ const BackgroundWrapper = styled.section<{ width: number, size: number }>`
     height: 100%;
     background: linear-gradient(
       0deg,
-      ${colorScheme.gradients.grayToWhite.start} 0%, 
-      ${colorScheme.gradients.grayToWhite.end} 100%);
+      ${colorScheme.palette.gray} 0%, 
+      ${colorScheme.palette.gray} 55%,
+      ${colorScheme.palette.white} 100%);
     z-index: -1;
   }
 `

@@ -3,6 +3,11 @@ import jsonData from './text.json'
 
 type StartBlocks = 'title' | 'subtitle' | 'callMeButton'
 type AboutMeBlocks = 'title' | 'hello' | 'lastYears' | 'accordion'
+type SkillsBlocks = 'title' | 'subtitle' | 'tabs'
+
+type LangStringArray = {
+  [key in Langs]: string
+}
 
 type AboutMeAccordionItem = {
   title: {[key in Langs]: string}
@@ -26,6 +31,10 @@ export const getAboutMeAccordion = (lang: Langs): MappedAboutMeAccordionItem[] =
     title: item.title[lang],
     content: item.content.map((contentItem: {[key in Langs]: string}) => contentItem[lang]),
   }))
+export const getSkillsText = (lang: Langs, block: Exclude<SkillsBlocks, 'tabs'>) =>
+  textDataObj.skills[block][lang]
+export const getSkillsTabs = (lang: Langs): string[] =>
+  textDataObj.skills.tabs.map((tab: LangStringArray) => tab[lang])
 
 export const getNavLinks = (lang: Langs) => {
   const links = Object.keys(textDataObj.navigation).map((route) => ({

@@ -15,11 +15,9 @@ const ContentContainer = styled.div`
   }
 `
 
-export const AboutMeContent: React.FC = () => {
-  return (
-    <ContentContainer>
-      <ImagesPart />
-      <InfoPart />
-    </ContentContainer>
-  )
-}
+export const AboutMeContent: React.FC = () => (
+  <ContentContainer>
+    <ImagesPart />
+    <InfoPart />
+  </ContentContainer>
+)

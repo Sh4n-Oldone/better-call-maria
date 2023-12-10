@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { DefaultText, HeadingText } from 'src/styled'
+import { HeadingText } from 'src/styled'
 import { useLangStore } from 'stores'
 import { getStartText } from 'utils'
+import { SubtitleText } from '../shared'
 
 const TitleContainer = styled.div`
   display: flex;
@@ -21,10 +22,6 @@ const SubtitleContainer = styled.div`
   width: 75%;
   max-width: 686px;
   margin-top: 25px;
-`
-const SubtitleText = styled(DefaultText)`
-  font-size: 16px;
-  line-height: 24px;
 `
 
 export const MyTitle: React.FC = () => {
