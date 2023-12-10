@@ -14,7 +14,7 @@ const BodyWrapper = styled.div`
   justify-content: center;
   width: 100%;
 `
-const BackgroundWrapper = styled.section<{ width: number, size: number }>`
+const BackgroundWrapper = styled.section<{ width: number; size: number }>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,8 @@ const BackgroundWrapper = styled.section<{ width: number, size: number }>`
     content: '';
     position: absolute;
     top: 0;
-    left: calc(-100vw / 2 + ${({ width, size }) => width > 1880 ? 940 : width / 2 - size}px);
+    left: calc(-100vw / 2 + ${({ width, size }) =>
+			width > 1880 ? 940 : width / 2 - size}px);
     width: 100vw;
     height: 100%;
     background: linear-gradient(
@@ -41,32 +42,36 @@ const BackgroundWrapper = styled.section<{ width: number, size: number }>`
 `
 
 export const ContentBody: React.FC = () => {
-  const [width, setWidth] = useState(window.innerWidth ?? 0)
-  const [scrollbarSize, setScrollbarSize] = useState(0)
+	const [width, setWidth] = useState(window.innerWidth ?? 0)
+	const [scrollbarSize, setScrollbarSize] = useState(0)
 
-  useEffect(() => {
-    setScrollbarSize(window.innerWidth - document.documentElement.clientWidth)
-  }, [document.documentElement.clientWidth])
-  
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth ?? 2)
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	useEffect(() => {
+		setScrollbarSize(
+			window.innerWidth - document.documentElement.clientWidth,
+		)
+	}, [document.documentElement.clientWidth])
 
-    window.addEventListener('resize', handleResize)
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	useEffect(() => {
+		const handleResize = () => setWidth(window.innerWidth ?? 2)
 
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [window.innerWidth])
+		window.addEventListener('resize', handleResize)
 
-  return (
-    <BodyWrapper>
-      <StartBlock />
-      <BackgroundWrapper width={width} size={scrollbarSize}>
-        <AboutMeBlock />
-        <SkillsBlock />
-      </BackgroundWrapper>
-      <CasesBlock />
-      <OtherProjectsBlock />
-    </BodyWrapper>
-  )
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [window.innerWidth])
+
+	return (
+		<BodyWrapper>
+			<StartBlock />
+			<BackgroundWrapper width={width} size={scrollbarSize}>
+				<AboutMeBlock />
+				<SkillsBlock />
+			</BackgroundWrapper>
+			<CasesBlock />
+			<OtherProjectsBlock />
+		</BodyWrapper>
+	)
 }

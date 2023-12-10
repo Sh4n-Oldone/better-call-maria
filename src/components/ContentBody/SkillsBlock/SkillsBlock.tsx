@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { useLangStore } from 'stores'
 import { getSkillsText } from 'utils'
-import { SecondaryHeadingText } from 'src/styled'
 import { colorScheme } from 'shared'
+import { SecondaryHeadingText } from 'src/styled'
 import { SubtitleText } from '../shared'
 import { SkillsTabs } from './SkillsTabs'
 
@@ -25,18 +25,16 @@ const ModSubtitleText = styled(SubtitleText)`
 `
 
 export const SkillsBlock: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
+	const currLang = useLangStore((state) => state.langTheme)
 
-  return (
-    <MainWrapper id='skills'>
-      <SecondaryHeadingText>
-        {getSkillsText(currLang, 'title')}
-      </SecondaryHeadingText>
-      <ModSubtitleText>
-        {getSkillsText(currLang, 'subtitle')}
-      </ModSubtitleText>
+	return (
+		<MainWrapper id='skills'>
+			<SecondaryHeadingText>
+				{getSkillsText(currLang, 'title')}
+			</SecondaryHeadingText>
+			<ModSubtitleText>{getSkillsText(currLang, 'subtitle')}</ModSubtitleText>
 
-      <SkillsTabs />
-    </MainWrapper>
-  )
+			<SkillsTabs />
+		</MainWrapper>
+	)
 }

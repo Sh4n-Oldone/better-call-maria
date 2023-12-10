@@ -16,8 +16,8 @@ const ContentContainer = styled.div`
 `
 
 export const AboutMeContent: React.FC = () => (
-  <ContentContainer>
-    <ImagesPart />
-    <InfoPart />
-  </ContentContainer>
+	<ContentContainer>
+		<ImagesPart />
+		<InfoPart />
+	</ContentContainer>
 )

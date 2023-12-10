@@ -43,15 +43,15 @@ const Button = styled.button`
 `
 
 export const ContactMeButton: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
+	const currLang = useLangStore((state) => state.langTheme)
 
-  const handleClick = () => { }
+	const handleClick = () => {}
 
-  return (
-    <BorderWrapper>
-      <Button onClick={handleClick}>
-        {getStartText(currLang, 'callMeButton')}
-      </Button>
-    </BorderWrapper>
-  )
+	return (
+		<BorderWrapper>
+			<Button onClick={handleClick}>
+				{getStartText(currLang, 'callMeButton')}
+			</Button>
+		</BorderWrapper>
+	)
 }

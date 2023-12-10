@@ -14,7 +14,5 @@ const Container = styled.div`
 `
 
 export const IdeaToProfit: React.FC = () => {
-  return (
-    <Container>IdeaToProfit</Container>
-  )
+	return <Container>IdeaToProfit</Container>
 }

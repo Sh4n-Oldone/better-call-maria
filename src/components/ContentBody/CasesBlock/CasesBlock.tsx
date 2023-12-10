@@ -10,9 +10,5 @@ const MainWrapper = styled.section`
 `
 
 export const CasesBlock: React.FC = () => {
-  return (
-    <MainWrapper id='cases'>
-      CasesBlock
-    </MainWrapper>
-  )
+	return <MainWrapper id='cases'>CasesBlock</MainWrapper>
 }

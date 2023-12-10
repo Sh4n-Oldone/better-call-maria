@@ -33,17 +33,17 @@ const LinkItem = styled.li`
 `
 
 export const Navigation: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
+	const currLang = useLangStore((state) => state.langTheme)
 
-  return (
-    <NavContainer>
-      <LinksList>
-        {getNavLinks(currLang).map(({ path, name }) => (
-          <LinkItem key={name}>
-            <Link to={path}>{name}</Link>
-          </LinkItem>
-        ))}
-      </LinksList>
-    </NavContainer>
-  )
+	return (
+		<NavContainer>
+			<LinksList>
+				{getNavLinks(currLang).map(({ path, name }) => (
+					<LinkItem key={name}>
+						<Link to={path}>{name}</Link>
+					</LinkItem>
+				))}
+			</LinksList>
+		</NavContainer>
+	)
 }

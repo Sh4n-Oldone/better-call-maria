@@ -111,22 +111,22 @@ const BottomText = styled(DefaultText)`
 `
 
 export const ImagesPart: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
+	const currLang = useLangStore((state) => state.langTheme)
 
-  return (
-    <MainContainer>
-      <ContentContainer>
-        <ImageContainer>
-          <Frame />
-          <ImageContent>
-            <Image src="/avatar_compressed.png" alt="avatar" />
-          </ImageContent>
-          <HelloText>{getAboutMeText(currLang, 'hello')}</HelloText>
-        </ImageContainer>
-        <BottomTextContainer>
-          <BottomText>{getAboutMeText(currLang, 'lastYears')}</BottomText>
-        </BottomTextContainer>
-      </ContentContainer>
-    </MainContainer>
-  )
+	return (
+		<MainContainer>
+			<ContentContainer>
+				<ImageContainer>
+					<Frame />
+					<ImageContent>
+						<Image src='/avatar_compressed.png' alt='avatar' />
+					</ImageContent>
+					<HelloText>{getAboutMeText(currLang, 'hello')}</HelloText>
+				</ImageContainer>
+				<BottomTextContainer>
+					<BottomText>{getAboutMeText(currLang, 'lastYears')}</BottomText>
+				</BottomTextContainer>
+			</ContentContainer>
+		</MainContainer>
+	)
 }

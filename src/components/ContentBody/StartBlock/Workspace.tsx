@@ -7,5 +7,5 @@ const Image = styled.img`
 `
 
 export const Workspace: React.FC = () => (
-  <Image src="/workspace_compressed.png" alt="Workspace" />
+	<Image src='/workspace_compressed.png' alt='Workspace' />
 )

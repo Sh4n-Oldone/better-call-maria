@@ -32,9 +32,7 @@ const Button = styled.button`
 `
 
 export const CallMeButton: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
+	const currLang = useLangStore((state) => state.langTheme)
 
-  return (
-    <Button>{getStartText(currLang, 'callMeButton')}</Button>
-  )
+	return <Button>{getStartText(currLang, 'callMeButton')}</Button>
 }

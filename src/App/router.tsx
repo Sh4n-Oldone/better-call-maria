@@ -4,15 +4,15 @@ import Developer from '../routes/Developer'
 import NotFound from '../routes/NotFound'
 
 export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <NotFound />,
-    children: [
-      {
-        path: '/developer',
-        element: <Developer />,
-      },
-    ],
-  },
+	{
+		path: '/',
+		element: <App />,
+		errorElement: <NotFound />,
+		children: [
+			{
+				path: '/developer',
+				element: <Developer />,
+			},
+		],
+	},
 ])

@@ -25,21 +25,21 @@ const SubtitleContainer = styled.div`
 `
 
 export const MyTitle: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
-  
-  return (
-    <TitleContainer>
-      <HeadingText>{getStartText(currLang, 'title')}</HeadingText>
-    </TitleContainer>
-  )
+	const currLang = useLangStore((state) => state.langTheme)
+
+	return (
+		<TitleContainer>
+			<HeadingText>{getStartText(currLang, 'title')}</HeadingText>
+		</TitleContainer>
+	)
 }
 
 export const MySubTitle: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
-  
-  return (
-    <SubtitleContainer>
-      <SubtitleText>{getStartText(currLang, 'subtitle')}</SubtitleText>
-    </SubtitleContainer>
-  )
+	const currLang = useLangStore((state) => state.langTheme)
+
+	return (
+		<SubtitleContainer>
+			<SubtitleText>{getStartText(currLang, 'subtitle')}</SubtitleText>
+		</SubtitleContainer>
+	)
 }

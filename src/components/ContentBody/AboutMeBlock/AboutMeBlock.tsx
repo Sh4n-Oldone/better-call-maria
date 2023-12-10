@@ -20,14 +20,14 @@ const MainWrapper = styled.section`
 `
 
 export const AboutMeBlock: React.FC = () => {
-  const currLang = useLangStore((state) => state.langTheme)
+	const currLang = useLangStore((state) => state.langTheme)
 
-  return (
-    <MainWrapper id='about-me'>
-      <SecondaryHeadingText>
-        {getAboutMeText(currLang, 'title')}
-      </SecondaryHeadingText>
-      <AboutMeContent />
-    </MainWrapper>
-  )
+	return (
+		<MainWrapper id='about-me'>
+			<SecondaryHeadingText>
+				{getAboutMeText(currLang, 'title')}
+			</SecondaryHeadingText>
+			<AboutMeContent />
+		</MainWrapper>
+	)
 }

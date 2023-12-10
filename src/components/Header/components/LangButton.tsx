@@ -25,13 +25,13 @@ const ButtonText = styled.span<{ isActive: boolean }>`
 `
 
 export const LangButton: React.FC = () => {
-  const switchLangTheme = useLangStore((state) => state.switchLangTheme)
-  const langTheme = useLangStore((state) => state.langTheme)
+	const switchLangTheme = useLangStore((state) => state.switchLangTheme)
+	const langTheme = useLangStore((state) => state.langTheme)
 
-  return (
-    <LangBtn onClick={switchLangTheme}>
-      <ButtonText isActive={langTheme === Langs.EN}>en</ButtonText>
-      <ButtonText isActive={langTheme === Langs.RU}>рус</ButtonText>
-    </LangBtn>
-  )
+	return (
+		<LangBtn onClick={switchLangTheme}>
+			<ButtonText isActive={langTheme === Langs.EN}>en</ButtonText>
+			<ButtonText isActive={langTheme === Langs.RU}>рус</ButtonText>
+		</LangBtn>
+	)
 }

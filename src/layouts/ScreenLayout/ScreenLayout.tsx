@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
-import {
-  Header,
-  ContentBody,
-  Footer,
-  ScrollToAnchor,
-} from 'components'
+import { Header, ContentBody, Footer, ScrollToAnchor } from 'components'
 import { HeaderHeight } from 'constants'
 
-type Props =  {
-  children?: React.ReactNode
+type Props = {
+	children?: React.ReactNode
 }
 
 const Wrapper = styled.div<{ size: number }>`
@@ -38,36 +33,39 @@ const Content = styled.div`
 `
 
 const ContentSwitcher: React.FC<Props> = ({ children }) => {
-  const isMain = useLocation().pathname === '/'
+	const isMain = useLocation().pathname === '/'
 
-  if (isMain) return (
-    <ContentContainer>
-      <Header />
-      <ContentBody />
-      <Footer />
-    </ContentContainer>
-  )
+	if (isMain)
+		return (
+			<ContentContainer>
+				<Header />
+				<ContentBody />
+				<Footer />
+			</ContentContainer>
+		)
 
-  return (
-    <ContentContainer>
-      <Header />
-      <Content>{children}</Content>
-      <Footer />
-    </ContentContainer>
-  )
+	return (
+		<ContentContainer>
+			<Header />
+			<Content>{children}</Content>
+			<Footer />
+		</ContentContainer>
+	)
 }
 
 export const ScreenLayout: React.FC<Props> = ({ children }) => {
-  const [scrollbarSize, setScrollbarSize] = useState(0)
+	const [scrollbarSize, setScrollbarSize] = useState(0)
 
-  useEffect(() => {
-    setScrollbarSize(window.innerWidth - document.documentElement.clientWidth)
-  }, [document.documentElement.clientWidth])
+	useEffect(() => {
+		setScrollbarSize(
+			window.innerWidth - document.documentElement.clientWidth,
+		)
+	}, [document.documentElement.clientWidth])
 
-  return (
-    <Wrapper size={scrollbarSize}>
-      <ScrollToAnchor />
-      <ContentSwitcher children={children} />
-    </Wrapper>
-  )
+	return (
+		<Wrapper size={scrollbarSize}>
+			<ScrollToAnchor />
+			<ContentSwitcher children={children} />
+		</Wrapper>
+	)
 }

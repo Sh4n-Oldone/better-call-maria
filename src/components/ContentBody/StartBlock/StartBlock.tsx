@@ -49,18 +49,18 @@ const ContentContainer = styled.div`
 `
 
 export const StartBlock: React.FC = () => {
-  return (
-    <MainWrapper id='start'>
-      <MainContainerWrapper>
-        <Checkers />
-        <ContentContainer>
-          <IdeaToProfit />
-          <MyTitle />
-          <MySubTitle />
-          <CallMeButton />
-          <Workspace />
-        </ContentContainer>
-      </MainContainerWrapper>
-    </MainWrapper>
-  )
+	return (
+		<MainWrapper id='start'>
+			<MainContainerWrapper>
+				<Checkers />
+				<ContentContainer>
+					<IdeaToProfit />
+					<MyTitle />
+					<MySubTitle />
+					<CallMeButton />
+					<Workspace />
+				</ContentContainer>
+			</MainContainerWrapper>
+		</MainWrapper>
+	)
 }

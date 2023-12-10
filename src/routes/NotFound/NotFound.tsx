@@ -1,7 +1,5 @@
 import React from 'react'
 
 export const NotFound: React.FC = () => {
-  return (
-    <div>NotFound page</div>
-  )
+	return <div>NotFound page</div>
 }
