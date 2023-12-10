@@ -18,6 +18,10 @@ const MainContainer = styled.div`
   width: 100%;
   height: 100%;
   flex: 1.05;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+  }
 `
 const ContentContainer = styled.div`
   display: flex;
@@ -60,7 +64,6 @@ const ControllableWrapper = styled.span<{ isActive: boolean }>`
 `
 const StyledAccordionButton = styled(AccordionButton)<{ isActive: boolean }>`
   &:hover {
-    ${({ isActive }) => isActive && 'background-color: #FFF;'} // does not works
     border-color: transparent;
   }
 

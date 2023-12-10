@@ -10,6 +10,10 @@ const MainContainer = styled.div`
   justify-content: end;
   width: 100%;
   flex: 0.95;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+  }
 `
 const ContentContainer = styled.div`
   display: flex;

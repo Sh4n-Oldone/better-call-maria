@@ -7,6 +7,11 @@ const ContentContainer = styled.div`
   display: flex;
   gap: 5%;
   width: 100%;
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `
 
 export const AboutMeContent: React.FC = () => {
