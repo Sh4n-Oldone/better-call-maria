@@ -15,7 +15,7 @@ const TabsWrapper = styled.div`
     > button {
       border-radius: 18px;
       border: 1px solid ${colorScheme.grayFamily.gray_2};
-      
+      font-weight: 400;
     }
 
     > button:focus {
