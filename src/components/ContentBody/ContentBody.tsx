@@ -14,7 +14,7 @@ const BodyWrapper = styled.div`
   justify-content: center;
   width: 100%;
 `
-const BackgroundWrapper = styled.section<{ width: number; size: number }>`
+const BackgroundWrapper = styled.div<{ width: number; size: number }>`
   position: relative;
   display: flex;
   flex-direction: column;

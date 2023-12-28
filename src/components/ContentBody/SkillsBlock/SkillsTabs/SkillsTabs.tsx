@@ -4,11 +4,20 @@ import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import { useLangStore } from 'stores'
 import { getSkillsTabs } from 'utils'
 import { colorScheme } from 'shared'
+import { Card } from './Card'
+import { Methods } from './Methods'
+import { Skills } from './Skills'
+import { Management } from './Management'
+import { Tools } from './Tools'
 
 const TabsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   margin-top: 48px;
+  width: 90%;
 
   > div .chakra-tabs__tablist {
+    justify-content: center;
     gap: 10px;
     border-bottom: none;
 
@@ -24,10 +33,15 @@ const TabsWrapper = styled.div`
   }
 `
 
+const tabPanelInlineStyle = {
+	paddingTop: '32px',
+	paddingBottom: '118px',
+}
+
 // TODO: content switcher by name
 
 export const SkillsTabs: React.FC = () => {
-	const [tabIndex, setTabIndex] = useState(0)
+	const [tabIndex, setTabIndex] = useState<number>(0)
 	const currLang = useLangStore((state) => state.langTheme)
 
 	const tabs = getSkillsTabs(currLang)
@@ -38,7 +52,7 @@ export const SkillsTabs: React.FC = () => {
 
 	return (
 		<TabsWrapper>
-			<Tabs onChange={handleTabChange}>
+			<Tabs onChange={handleTabChange} width={'100%'}>
 				<TabList>
 					{tabs.map((tab, index) => (
 						<Tab
@@ -56,17 +70,25 @@ export const SkillsTabs: React.FC = () => {
 					))}
 				</TabList>
 				<TabPanels>
-					<TabPanel>
-						<p>{`${tabs[0]} content`}</p>
+					<TabPanel {...tabPanelInlineStyle}>
+						<Card>
+							<Methods />
+						</Card>
 					</TabPanel>
-					<TabPanel>
-						<p>{`${tabs[1]} content`}</p>
+					<TabPanel {...tabPanelInlineStyle}>
+						<Card>
+							<Skills />
+						</Card>
 					</TabPanel>
-					<TabPanel>
-						<p>{`${tabs[2]} content`}</p>
+					<TabPanel {...tabPanelInlineStyle}>
+						<Card>
+							<Management />
+						</Card>
 					</TabPanel>
-					<TabPanel>
-						<p>{`${tabs[3]} content`}</p>
+					<TabPanel {...tabPanelInlineStyle}>
+						<Card>
+							<Tools />
+						</Card>
 					</TabPanel>
 				</TabPanels>
 			</Tabs>

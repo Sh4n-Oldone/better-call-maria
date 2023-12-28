@@ -11,12 +11,19 @@ const MainWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   max-width: 1880px;
   background-color: ${colorScheme.palette.gray};
   border-radius: 42px;
   margin-top: 20px;
   padding-top: 72px;
+`
+const HeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
 `
 const ModSubtitleText = styled(SubtitleText)`
   max-width: 572px;
@@ -29,10 +36,14 @@ export const SkillsBlock: React.FC = () => {
 
 	return (
 		<MainWrapper id='skills'>
-			<SecondaryHeadingText>
-				{getSkillsText(currLang, 'title')}
-			</SecondaryHeadingText>
-			<ModSubtitleText>{getSkillsText(currLang, 'subtitle')}</ModSubtitleText>
+			<HeaderWrapper>
+				<SecondaryHeadingText>
+					{getSkillsText(currLang, 'title')}
+				</SecondaryHeadingText>
+				<ModSubtitleText>
+					{getSkillsText(currLang, 'subtitle')}
+				</ModSubtitleText>
+			</HeaderWrapper>
 
 			<SkillsTabs />
 		</MainWrapper>

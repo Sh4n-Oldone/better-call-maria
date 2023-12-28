@@ -13,6 +13,7 @@ export const MediumText = styled(DefaultText)`
 
 export const HeadingText = styled.h1`
   font-family: 'Noto Sans Symbols Variable', sans-serif;
+  text-align: center;
   font-weight: 900;
   font-size: 52px;
   line-height: 62.4px;
@@ -23,6 +24,7 @@ export const HeadingText = styled.h1`
 
 export const SecondaryHeadingText = styled.h2`
   font-family: 'Noto Sans Symbols Variable', sans-serif;
+  text-align: center;
   font-weight: 500;
   font-size: 42px;
   line-height: 62.4px;

@@ -133,6 +133,138 @@
         "RU": "Инструменты",
         "EN": "Tools"
       }
-    ]
+    ],
+    "tabsContent": {
+      "skills": {
+        "title": {
+          "RU": "Навыки",
+          "EN": "Skills"
+        },
+        "firstSubtitle": {
+          "RU": "Какие навыки я приобрела за время работы?",
+          "EN": "What skills have I acquired over the years?"
+        },
+        "secondSubtitle": {
+          "RU": "Про навыки и опыт я подробно рассказываю в своем резюме. Но здесь тезисно выделю то, что наибольшим образом характеризует меня как профессионала.",
+          "EN": "I tell in detail about my skills and experience in my resume. But here I will briefly highlight what most characterizes me as a professional."
+        },
+        "methodsListTitle": {
+          "RU": "Методы",
+          "EN": "Methods"
+        },
+        "methodsList": [
+          {
+            "RU": "UX-исследования, брифы, опросники;",
+            "EN": "UX research, briefs, questionnaires;"
+          },
+          {
+            "RU": "Юзабилити тестирования, глубинные интервью, фокус-группы, коридорные исследования;",
+            "EN": "Usability testing, in-depth interviews, focus groups, hallway research;"
+          },
+          {
+            "RU": "Анализ конкурентов, Фреймворки JTBD, CJM, SwimLane, Lean;",
+            "EN": "Competitive analysis, JTBD, CJM, SwimLane, Lean frameworks;"
+          },
+          {
+            "RU": "Дизайн мышление, навыки презентации решений.",
+            "EN": "Design thinking, presentation skills."
+          }
+        ],
+        "skillsListTitle": {
+          "RU": "Навыки",
+          "EN": "Skills"
+        },
+        "skillsList": [
+          {
+            "RU": "Lo-Fi, Hi-Fi Wireframes, Clickable Interactive Prototypes, Micro-animations (Figma);",
+            "EN": "Lo-Fi, Hi-Fi Wireframes, Clickable Interactive Prototypes, Micro-animations (Figma);"
+          },
+          {
+            "RU": "UI-Design, Design System, BrandBook, Guidelines;",
+            "EN": "UI-Design, Design System, BrandBook, Guidelines;"
+          },
+          {
+            "RU": "HIG, Google Material, Huawei Guidelines.",
+            "EN": "HIG, Google Material, Huawei Guidelines."
+          }
+        ]
+      },
+      "management": {
+        "title": {
+          "RU": "Менеджмент",
+          "EN": "Management"
+        },
+        "firstSubtitle": {
+          "RU": "На что я обращаю внимание в работе с людьми?",
+          "EN": "What do I pay attention to when working with people?"
+        },
+        "secondSubtitle": {
+          "RU": "Главным образом на создание комфортной атмосферы в команде. Я ценю софт скиллы куда выше, чем хард скиллы, потому что специалиста можно вырастить, но не перевоспитать.",
+          "EN": "Mainly on creating a comfortable atmosphere in the team. I value soft skills much higher than hard skills, because you can grow a specialist, but you cannot re-educate him."
+        },
+        "methodsListTitle": {
+          "RU": "Методы",
+          "EN": "Methods"
+        },
+        "methodsList": [
+          {
+            "RU": "Управление несколькими дизайн-командами, эстимация и приоритизация задач в бэклоге;",
+            "EN": "Managing several design teams, estimating and prioritizing tasks in the backlog;"
+          },
+          {
+            "RU": "Стратегическое видение развития продукта, тесное взаимодействие со стейкхолдерами, принятие ключевых решений;",
+            "EN": "Strategic vision of product development, close interaction with stakeholders, making key decisions;"
+          },
+          {
+            "RU": "Внутренняя стратегия дизайн-команды, создание квартальных роадмапов, создание и курирование процессов онбординга;",
+            "EN": "Internal design team strategy, creating quarterly roadmaps, creating and curating onboarding processes;"
+          },
+          {
+            "RU": "Отслеживание метрик успешности спринта, метрик здоровья продукта и хорошего настроя в команде;",
+            "EN": "Tracking sprint success metrics, product health metrics, and good team morale;"
+          },
+          {
+            "RU": "One-to-one встречи с дизайнерами для устранения сложностей в работе и создания карты роста.",
+            "EN": "One-to-one meetings with designers to address work challenges and create a growth map."
+          }
+        ]
+      },
+      "tools": {
+        "title": {
+          "RU": "Инструменты",
+          "EN": "Tools"
+        },
+        "firstSubtitle": {
+          "RU": "Какие инструменты я чаще всего использую в работе?",
+          "EN": "What tools do I use most often at work?"
+        },
+        "secondSubtitle": {
+          "RU": "Практически 90% задач я закрываю в фигме. Далее перечень программ, с которыми мне приходилось работать.",
+          "EN": "I close almost 90% of tasks in Figma. Below is a list of programs I have worked with."
+        },
+        "programsListTitle": {
+          "RU": "Программы",
+          "EN": "Programs"
+        },
+        "programsList": [
+					{
+						"RU": "Figma, Miro, Notion - дизайн, прототипы, идеация идей, документация по проекту;",
+						"EN": "Figma, Miro, Notion - design, prototypes, ideation of ideas, project documentation;"
+					},
+					{
+						"RU": "Azure DevOps, Microsoft Teams, Slack - отслеживание задач, эстимация бэклога и приоритизация задач;",
+						"EN": "Azure DevOps, Microsoft Teams, Slack - tracking tasks, backlog estimation and prioritization;"
+					},
+					{
+						"RU": "Spline, Stormbpmn, AppMetrica - создание 3D форм, схем для работы и отслеживание метрик продукта;",
+						"EN": "Spline, Stormbpmn, AppMetrica - creating 3D shapes, diagrams for work and tracking product metrics;"
+					},
+					{
+						"RU": "Adobe (Illustrator, Photoshop) - небольшие задачи по коррекции материалов, создание векторных иллюстраций при необходимости.",
+						"EN": "Adobe (Illustrator, Photoshop) - small tasks for correcting materials, creating vector illustrations if necessary."
+					}
+        ]
+      }
+    }
   }
 }
