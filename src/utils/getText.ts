@@ -5,9 +5,9 @@ type StartBlocks = 'title' | 'subtitle' | 'callMeButton'
 type AboutMeBlocks = 'title' | 'hello' | 'lastYears' | 'accordion'
 type SkillsBlocks = 'title' | 'subtitle' | 'tabs' | 'tabsContent'
 
-type SkillsTabsSkills = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList' | 'skillsListTitle' | 'skillsList'
-type SkillsTabsManagement = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList'
-type SkillsTabsPrograms = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'programsListTitle' | 'programsList'
+// type SkillsTabsSkills = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList' | 'skillsListTitle' | 'skillsList'
+// type SkillsTabsManagement = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList'
+// type SkillsTabsPrograms = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'programsListTitle' | 'programsList'
 
 
 type LangStringArray = {
