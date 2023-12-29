@@ -23,11 +23,11 @@ interface ITabProps {
 }
 
 const CarouselWrapper = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
   height: 100%;
   min-height: 556px;
-  overflow: hidden;
 
   > .slider-container > div:nth-child(4) > .slider-control-bottomcenter {
     margin-right: auto;
@@ -47,6 +47,11 @@ const CarouselWrapper = styled.div`
   }
 
   @media (max-width: 940px) {
+    position: absolute;
+    left: 8%;
+    bottom: 140px;
+    width: 84%;
+    height: 300px;
     background: linear-gradient(
       0deg,
       #121212 5%,
@@ -61,6 +66,14 @@ const CarouselWrapper = styled.div`
     }
   }
 `
+const MiniScreenSpacer = styled.div`
+  display: none;
+
+  @media (max-width: 940px) {
+    display: block;
+    height: 540px;
+  }
+`
 const TabOuterContainer = styled.div`
   height: 100%;
 `
@@ -73,6 +86,13 @@ const TabContainer = styled.div`
 `
 const TabImage = styled.img`
   width: 100%;
+
+  @media (max-width: 940px) {
+    height: 40%;
+    object-fit: cover;
+    border-radius: 40px;
+    transform: scale(1.01);
+  }
 `
 const TabSmallImage = styled.img`
   margin-top: 47px;
@@ -82,6 +102,7 @@ const TabSmallImage = styled.img`
 `
 const TabText = styled.p`
   margin-top: 25px;
+  margin-right: auto;
 
   @media (max-width: 940px) {
     margin-bottom: 100px;
@@ -142,20 +163,23 @@ export const MethodsCardContent: React.FC<IProps> = ({
 	// console.log('onTabChange', onTabChange)
 
 	return (
-		<CarouselWrapper>
-			<Carousel
-				slideIndex={getMethodIndex(activeTab)}
-				style={{ height: '100%' }}
-				renderCenterLeftControls={() => null}
-				renderCenterRightControls={() => null}
-				afterSlide={handleDrag}
-				speed={3}
-			>
-				<ResearchTab lang={currLang} />
-				<AnalysisTab lang={currLang} />
-				<FormationTab lang={currLang} />
-				<TestingTab lang={currLang} />
-			</Carousel>
-		</CarouselWrapper>
+		<>
+			<MiniScreenSpacer />
+			<CarouselWrapper>
+				<Carousel
+					slideIndex={getMethodIndex(activeTab)}
+					style={{ height: '100%', overflow: 'hidden' }}
+					renderCenterLeftControls={() => null}
+					renderCenterRightControls={() => null}
+					afterSlide={handleDrag}
+					speed={3}
+				>
+					<ResearchTab lang={currLang} />
+					<AnalysisTab lang={currLang} />
+					<FormationTab lang={currLang} />
+					<TestingTab lang={currLang} />
+				</Carousel>
+			</CarouselWrapper>
+		</>
 	)
 }
