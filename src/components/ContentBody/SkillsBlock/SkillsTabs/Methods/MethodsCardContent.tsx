@@ -27,6 +27,7 @@ const CarouselWrapper = styled.div`
   width: 100%;
   height: 100%;
   min-height: 556px;
+  overflow: hidden;
 
   > .slider-container > div:nth-child(4) > .slider-control-bottomcenter {
     margin-right: auto;
