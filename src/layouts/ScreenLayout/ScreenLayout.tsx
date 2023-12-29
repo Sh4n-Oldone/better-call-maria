@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
-import { Header, ContentBody, Footer, ScrollToAnchor } from 'components'
+import { ContentBody, Footer, ScrollToAnchor } from 'components'
 import { HeaderHeight } from 'constants'
 
 type Props = {
@@ -56,6 +56,7 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
 export const ScreenLayout: React.FC<Props> = ({ children }) => {
 	const [scrollbarSize, setScrollbarSize] = useState(0)
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		setScrollbarSize(
 			window.innerWidth - document.documentElement.clientWidth,
@@ -65,7 +66,7 @@ export const ScreenLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<Wrapper size={scrollbarSize}>
 			<ScrollToAnchor />
-			<ContentSwitcher children={children} />
+			<ContentSwitcher>{children}</ContentSwitcher>
 		</Wrapper>
 	)
 }
