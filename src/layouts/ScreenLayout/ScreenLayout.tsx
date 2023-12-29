@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
-import { ContentBody, Footer, ScrollToAnchor } from 'components'
+import { Header, ContentBody, Footer, ScrollToAnchor } from 'components'
 import { HeaderHeight } from 'constants'
 
 type Props = {
@@ -38,7 +38,7 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
 	if (isMain)
 		return (
 			<ContentContainer>
-				{/* <Header /> */}
+				<Header />
 				<ContentBody />
 				<Footer />
 			</ContentContainer>
@@ -46,7 +46,7 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
 
 	return (
 		<ContentContainer>
-			{/* <Header /> */}
+			<Header />
 			<Content>{children}</Content>
 			<Footer />
 		</ContentContainer>
