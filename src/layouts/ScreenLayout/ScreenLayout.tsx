@@ -38,7 +38,7 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
 	if (isMain)
 		return (
 			<ContentContainer>
-				<Header />
+				{/* <Header /> */}
 				<ContentBody />
 				<Footer />
 			</ContentContainer>
@@ -46,7 +46,7 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
 
 	return (
 		<ContentContainer>
-			<Header />
+			{/* <Header /> */}
 			<Content>{children}</Content>
 			<Footer />
 		</ContentContainer>
