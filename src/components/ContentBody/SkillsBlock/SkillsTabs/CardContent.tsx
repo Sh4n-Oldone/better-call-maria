@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { cardBorderRadius } from './Card'
 
 interface IProps {
 	leftContent: React.ReactNode
@@ -23,6 +24,10 @@ const LeftContentWrapper = styled.div`
   display: flex;
   flex: 0.55;
   padding: 3% 5%;
+
+  @media (max-width: 940px) {
+    flex: 1;
+  }
 `
 
 const RightContentWrapper = styled.div`
@@ -33,9 +38,12 @@ const RightContentWrapper = styled.div`
     #121212 5%,
     #1E1E1E 100%
     );
-  /* border-radius: 40px 20px 20px 40px; // better */
-  border-radius: 30px; // idiotic
+  border-radius: ${cardBorderRadius}px;
   padding: 3%;
+
+  @media (max-width: 940px) {
+    display: none;
+  }
 `
 
 export const CardContent: React.FC<IProps> = ({

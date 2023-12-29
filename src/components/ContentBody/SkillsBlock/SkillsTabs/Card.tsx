@@ -6,9 +6,9 @@ interface IProps {
 	children: React.ReactNode
 }
 
-const borderRadius = 40
+export const cardBorderRadius = 40
 const padding = 20
-const innerWrapperBorderRadius = borderRadius - padding
+const outerWrapperBorderRadius = cardBorderRadius + padding
 
 const CardWrapper = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const CardWrapper = styled.div`
   max-width: 1048px;
   padding: ${padding}px;
   margin: 0 auto;
-  border-radius: ${borderRadius}px;
+  border-radius: ${outerWrapperBorderRadius}px;
   box-shadow: 20px 20px 64px 10px rgba(0, 0, 0, 0.12);
   background-color: ${colorScheme.palette.white};
 `
@@ -26,7 +26,7 @@ const InnerWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  border-radius: ${innerWrapperBorderRadius}px;
+  border-radius: ${cardBorderRadius}px;
   background: linear-gradient(
     0deg,
     ${colorScheme.palette.white} 32.81%,

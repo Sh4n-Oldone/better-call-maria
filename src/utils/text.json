@@ -135,6 +135,20 @@
       }
     ],
     "tabsContent": {
+      "methods": {
+        "title": {
+          "RU": "Методы исследований",
+          "EN": "Research methods"
+        },
+        "firstSubtitle": {
+          "RU": "Как выстроен мой идеальный дизайн-процесс?",
+          "EN": "How is my ideal design process built?"
+        },
+        "secondSubtitle": {
+          "RU": "Подходы к исследованиям всегда зависят от конкретной задачи. \nНо этапы в чем-то схожи и различаются только спецификой. Свою методологию я выработала благодаря Epam, менторству в Design Spot Community и реальному опыту работы в продукте.",
+          "EN": "Approaches to research always depend on the specific task. \nBut the stages are similar in something and differ only in specifics. I developed my methodology thanks to Epam, mentoring in the Design Spot Community and real experience in the product."
+        }
+      },
       "skills": {
         "title": {
           "RU": "Навыки",

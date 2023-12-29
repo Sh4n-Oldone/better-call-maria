@@ -106,3 +106,17 @@ export const getSkillsTabsToolsContent = (lang: Langs) => {
     programsList: programsList.map((item: LangStringArray) => item[lang]) as string[],
   }
 }
+
+export const getSkillsTabsMethodsContent = (lang: Langs) => {
+  const {
+    title, 
+    firstSubtitle, 
+    secondSubtitle,
+  } = textDataObj.skills.tabsContent.methods
+
+  return {
+    title: title[lang],
+    firstSubtitle: firstSubtitle[lang] as string,
+    secondSubtitle: secondSubtitle[lang] as string,
+  }
+}
