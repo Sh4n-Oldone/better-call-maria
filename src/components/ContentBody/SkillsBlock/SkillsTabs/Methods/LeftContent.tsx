@@ -11,7 +11,7 @@ import {
 } from '../sharedCardContentStyles'
 import { MethodsTabs } from './types'
 import { getMethodTabText } from './utils'
-import { MethodsCardContent } from './MethodsCardContent'
+// import { MethodsCardContent } from './MethodsCardContent'
 
 interface ILeftContentProps {
 	activeTab: MethodsTabs
@@ -26,13 +26,13 @@ interface IButtonProps {
 const ModSubtitle = styled(Subtitle)`
   white-space: pre-line;
 `
-const AltCard = styled.div`
-  display: none;
+// const AltCard = styled.div`
+//   display: none;
 
-  @media (max-width: 940px) {
-    display: block;
-  }
-`
+//   @media (max-width: 940px) {
+//     display: block;
+//   }
+// `
 const ButtonsWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -181,12 +181,12 @@ export const LeftContent: React.FC<ILeftContentProps> = ({
 					onClick={() => handleTabChange(MethodsTabs.TESTING)}
 				/>
 			</ButtonsWrapper>
-			<AltCard>
+			{/* <AltCard>
 				<MethodsCardContent
 					activeTab={activeTab}
 					onTabChange={handleTabChange}
 				/>
-			</AltCard>
+			</AltCard> */}
 		</LeftContentWrapper>
 	)
 }
