@@ -4,6 +4,10 @@ export const LeftContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;
+
+  @media (max-width: 940px) {
+    width: 100%;
+  }
 `
 export const TitleContainer = styled.div`
   display: flex;

@@ -47,12 +47,17 @@ const CarouselWrapper = styled.div`
 
   @media (max-width: 940px) {
     background: linear-gradient(
-    0deg,
-    #121212 5%,
-    #1E1E1E 100%
+      0deg,
+      #121212 5%,
+      #1E1E1E 100%
     );
     border-radius: ${cardBorderRadius}px;
-    padding: 3%;
+    padding: 5%;
+
+    > .slider-container {
+      width: 100%;
+      padding-top: 20px;
+    }
   }
 `
 const TabOuterContainer = styled.div`
