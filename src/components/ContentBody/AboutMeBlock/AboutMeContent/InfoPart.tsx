@@ -40,26 +40,6 @@ const TextContentContainer = styled.div`
   gap: 27px;
   width: 100%;
 `
-const StyledAccordionItem = styled(AccordionItem)<{ isActive: boolean }>`
-  background: ${colorScheme.palette.gray};
-  border: 1px solid ${colorScheme.grayFamily.gray_2};
-  border-radius: 12px;
-
-  ${({ isActive }) =>
-		isActive &&
-		`
-    background: #FFF;
-    border-radius: 0 12px 12px 0;
-  `}
-
-  &:hover {
-    ${({ isActive }) => isActive && 'background: #FFF;'}
-  }
-
-  &:focus {
-    outline: none;
-  }
-`
 const ControllableWrapper = styled.span<{ isActive: boolean }>`
   > button:hover {
     ${({ isActive }) =>
@@ -104,6 +84,15 @@ const StyledAccordionPanel = styled(AccordionPanel)`
   border-radius: 12px;
 `
 
+const getAccordionItemStyles = (isActive: boolean) => ({
+	background: isActive ? '#FFF' : colorScheme.palette.gray,
+	border: `1px solid ${colorScheme.grayFamily.gray_2}`,
+	borderRadius: isActive ? '0 12px 12px 0' : '12px',
+	borderLeft: isActive
+		? `3px solid ${colorScheme.palette.black}`
+		: `1px solid ${colorScheme.grayFamily.gray_2}`,
+})
+
 export const InfoPart: React.FC = () => {
 	const [openItem, setOpenItem] = useState<number>(0)
 	const currLang = useLangStore((state) => state.langTheme)
@@ -118,15 +107,10 @@ export const InfoPart: React.FC = () => {
 			<ContentContainer>
 				<Accordion defaultIndex={0} onChange={handleItemClick}>
 					{accordionItems.map((item, index) => (
-						<StyledAccordionItem
+						<AccordionItem
 							key={item.title}
 							m={4}
-							isActive={index === openItem}
-							borderLeft={
-								index === openItem
-									? `3px solid ${colorScheme.palette.black}`
-									: `1px solid ${colorScheme.grayFamily.gray_2}`
-							}
+							style={getAccordionItemStyles(index === openItem)}
 						>
 							<ControllableWrapper isActive={index === openItem}>
 								<StyledAccordionButton
@@ -148,7 +132,7 @@ export const InfoPart: React.FC = () => {
 									</TextContentContainer>
 								))}
 							</StyledAccordionPanel>
-						</StyledAccordionItem>
+						</AccordionItem>
 					))}
 				</Accordion>
 			</ContentContainer>

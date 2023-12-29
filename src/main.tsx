@@ -12,7 +12,10 @@ import '@fontsource-variable/noto-sans-symbols'
 // biome-ignore lint/style/noNonNullAssertion: <explanation>
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<StyleSheetManager shouldForwardProp={isPropValid}>
+		<StyleSheetManager
+			shouldForwardProp={isPropValid}
+			enableVendorPrefixes={true}
+		>
 			<RouterProvider router={router} />
 		</StyleSheetManager>
 	</React.StrictMode>,
