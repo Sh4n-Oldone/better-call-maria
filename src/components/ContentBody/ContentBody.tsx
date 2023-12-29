@@ -24,7 +24,7 @@ const BackgroundWrapper = styled.div<{ width: number; size: number }>`
   border-radius: 42px;
   z-index: 2;
 
-  &:before {
+  /* &:before {
     content: '';
     position: absolute;
     top: 0;
@@ -38,7 +38,7 @@ const BackgroundWrapper = styled.div<{ width: number; size: number }>`
       ${colorScheme.palette.gray} 55%,
       ${colorScheme.palette.white} 100%);
     z-index: -1;
-  }
+  } */
 `
 
 export const ContentBody: React.FC = () => {

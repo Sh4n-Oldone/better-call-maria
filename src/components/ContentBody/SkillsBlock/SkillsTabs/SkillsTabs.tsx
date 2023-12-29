@@ -30,7 +30,7 @@ const TabsWrapper = styled.div`
       border: 1px solid ${colorScheme.grayFamily.gray_2};
       font-weight: 400;
 
-      @media (max-width: 800px) {
+      @media (max-width: 850px) {
         width: 80%;
         margin: 0 auto;
       }
