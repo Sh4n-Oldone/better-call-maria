@@ -20,11 +20,20 @@ const TabsWrapper = styled.div`
     justify-content: center;
     gap: 10px;
     border-bottom: none;
+    
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
 
     > button {
       border-radius: 18px;
       border: 1px solid ${colorScheme.grayFamily.gray_2};
       font-weight: 400;
+
+      @media (max-width: 800px) {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
 
     > button:focus {
