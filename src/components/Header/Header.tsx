@@ -12,7 +12,14 @@ export const Header: React.FC = () => {
 	return (
 		<Wrapper>
 			<HeaderContentWrapper>
-				<LogoContainer>Logo</LogoContainer>
+				<LogoContainer>
+					<img
+						src='/xhunter_logo.png'
+						alt='logo'
+						height='18px'
+						width='81px'
+					/>
+				</LogoContainer>
 				<Navigation />
 				<RightBlock>
 					<ButtonContainer>
