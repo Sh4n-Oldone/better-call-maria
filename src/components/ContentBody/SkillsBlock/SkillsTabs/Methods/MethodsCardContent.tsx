@@ -159,9 +159,6 @@ export const MethodsCardContent: React.FC<IProps> = ({
 		onTabChange(getMethodTab(newIndex))
 	}
 
-	// console.log('activeTab', activeTab)
-	// console.log('onTabChange', onTabChange)
-
 	return (
 		<>
 			<MiniScreenSpacer />
