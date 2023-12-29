@@ -28,6 +28,10 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 610px;
+
+  @media (max-width: 850px) {
+    padding-bottom: 20px;
+  }
 `
 const TextContentContainer = styled.div`
   display: flex;
@@ -66,7 +70,9 @@ const ControllableWrapper = styled.span<{ isActive: boolean }>`
     `}
   }
 `
-const StyledAccordionButton = styled(AccordionButton)<{ isActive: boolean }>`
+const StyledAccordionButton = styled(AccordionButton)<{
+	isActive: boolean
+}>`
   &:hover {
     border-color: transparent;
   }
