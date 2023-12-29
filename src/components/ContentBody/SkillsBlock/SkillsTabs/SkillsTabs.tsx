@@ -5,7 +5,7 @@ import { useLangStore } from 'stores'
 import { getSkillsTabs } from 'utils'
 import { colorScheme } from 'shared'
 import { Card } from './Card'
-// import { Methods } from './Methods'
+import { Methods } from './Methods'
 import { Skills } from './Skills'
 import { Management } from './Management'
 import { Tools } from './Tools'
@@ -79,11 +79,11 @@ export const SkillsTabs: React.FC = () => {
 					))}
 				</TabList>
 				<TabPanels>
-					{/* <TabPanel {...tabPanelInlineStyle}>
+					<TabPanel {...tabPanelInlineStyle}>
 						<Card>
 							<Methods />
 						</Card>
-					</TabPanel> */}
+					</TabPanel>
 					<TabPanel {...tabPanelInlineStyle}>
 						<Card>
 							<Skills />
