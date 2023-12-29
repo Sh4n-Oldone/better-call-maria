@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-// import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
-import { Tab, TabList, Tabs } from '@chakra-ui/react'
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import { useLangStore } from 'stores'
 import { getSkillsTabs } from 'utils'
 import { colorScheme } from 'shared'
-// import { Card } from './Card'
+import { Card } from './Card'
 // import { Methods } from './Methods'
-// import { Skills } from './Skills'
-// import { Management } from './Management'
-// import { Tools } from './Tools'
+import { Skills } from './Skills'
+import { Management } from './Management'
+import { Tools } from './Tools'
 
 const TabsWrapper = styled.div`
   display: flex;
@@ -43,10 +42,10 @@ const TabsWrapper = styled.div`
   }
 `
 
-// const tabPanelInlineStyle = {
-// 	paddingTop: '32px',
-// 	paddingBottom: '118px',
-// }
+const tabPanelInlineStyle = {
+	paddingTop: '32px',
+	paddingBottom: '118px',
+}
 
 // TODO: content switcher by name
 
@@ -79,12 +78,12 @@ export const SkillsTabs: React.FC = () => {
 						</Tab>
 					))}
 				</TabList>
-				{/* <TabPanels>
-					<TabPanel {...tabPanelInlineStyle}>
+				<TabPanels>
+					{/* <TabPanel {...tabPanelInlineStyle}>
 						<Card>
 							<Methods />
 						</Card>
-					</TabPanel>
+					</TabPanel> */}
 					<TabPanel {...tabPanelInlineStyle}>
 						<Card>
 							<Skills />
@@ -100,7 +99,7 @@ export const SkillsTabs: React.FC = () => {
 							<Tools />
 						</Card>
 					</TabPanel>
-				</TabPanels> */}
+				</TabPanels>
 			</Tabs>
 		</TabsWrapper>
 	)
