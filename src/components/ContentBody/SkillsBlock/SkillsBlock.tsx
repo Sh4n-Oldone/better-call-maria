@@ -5,7 +5,7 @@ import { getSkillsText } from 'utils'
 import { colorScheme } from 'shared'
 import { SecondaryHeadingText } from 'src/styled'
 import { SubtitleText } from '../shared'
-// import { SkillsTabs } from './SkillsTabs'
+import { SkillsTabs } from './SkillsTabs'
 
 const MainWrapper = styled.section`
   display: flex;
@@ -44,7 +44,7 @@ export const SkillsBlock: React.FC = () => {
 				</ModSubtitleText>
 			</HeaderWrapper>
 
-			{/* <SkillsTabs /> */}
+			<SkillsTabs />
 		</MainWrapper>
 	)
 }
