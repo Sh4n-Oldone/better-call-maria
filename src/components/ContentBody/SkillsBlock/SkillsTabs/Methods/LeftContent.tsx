@@ -124,16 +124,12 @@ const Button: React.FC<IButtonProps> = ({ isActive, text, onClick }) => (
 		<TransparentContainer />
 		<ButtonContentContainer>
 			<ButtonLeftContentContainer>
-				<Image
-					src='../../../../../assets/check.svg'
-					alt='checkmark_icon'
-					isActive={isActive}
-				/>
+				<Image src='/check.svg' alt='checkmark_icon' isActive={isActive} />
 				<ButtonText>{text}</ButtonText>
 			</ButtonLeftContentContainer>
 			{isActive && (
 				<ArrowImage
-					src='../../../../../assets/arrowRight.svg'
+					src='/arrowRight.svg'
 					alt='arrow_icon'
 					isActive
 					width={34}

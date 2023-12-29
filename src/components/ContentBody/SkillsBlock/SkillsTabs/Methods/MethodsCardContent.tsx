@@ -85,8 +85,8 @@ const TabText = styled.p`
 const ResearchTab: React.FC<ITabProps> = ({ lang }) => (
 	<TabOuterContainer>
 		<TabContainer>
-			<TabImage src='/public/research_photo.png' />
-			<TabSmallImage src='/public/research_icon.png' />
+			<TabImage src='/research_photo.png' />
+			<TabSmallImage src='/research_icon.png' />
 			<TabText>{getMethodTabResearchText(lang)}</TabText>
 		</TabContainer>
 	</TabOuterContainer>
@@ -95,8 +95,8 @@ const ResearchTab: React.FC<ITabProps> = ({ lang }) => (
 const AnalysisTab: React.FC<ITabProps> = ({ lang }) => (
 	<TabOuterContainer>
 		<TabContainer>
-			<TabImage src='/public/analysis_photo.png' />
-			<TabSmallImage src='/public/analysis_icon.png' />
+			<TabImage src='/analysis_photo.png' />
+			<TabSmallImage src='/analysis_icon.png' />
 			<TabText>{getMethodTabAnalysisText(lang)}</TabText>
 		</TabContainer>
 	</TabOuterContainer>
@@ -105,8 +105,8 @@ const AnalysisTab: React.FC<ITabProps> = ({ lang }) => (
 const FormationTab: React.FC<ITabProps> = ({ lang }) => (
 	<TabOuterContainer>
 		<TabContainer>
-			<TabImage src='/public/formation_photo.png' />
-			<TabSmallImage src='/public/formation_icon.png' />
+			<TabImage src='/formation_photo.png' />
+			<TabSmallImage src='/formation_icon.png' />
 			<TabText>{getMethodTabFormationText(lang)}</TabText>
 		</TabContainer>
 	</TabOuterContainer>
@@ -115,8 +115,8 @@ const FormationTab: React.FC<ITabProps> = ({ lang }) => (
 const TestingTab: React.FC<ITabProps> = ({ lang }) => (
 	<TabOuterContainer>
 		<TabContainer>
-			<TabImage src='/public/testing_photo.png' />
-			<TabSmallImage src='/public/testing_icon.png' />
+			<TabImage src='/testing_photo.png' />
+			<TabSmallImage src='/testing_icon.png' />
 			<TabText>{getMethodTabTestingText(lang)}</TabText>
 		</TabContainer>
 	</TabOuterContainer>
