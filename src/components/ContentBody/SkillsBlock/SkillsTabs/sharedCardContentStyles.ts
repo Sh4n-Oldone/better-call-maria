@@ -13,6 +13,10 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @media (max-width: 1000px) {
+    padding: 0 5% 20px;
+  }
 `
 export const Title = styled.span`
   font-size: 28px;

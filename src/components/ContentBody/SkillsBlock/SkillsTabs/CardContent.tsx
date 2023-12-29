@@ -17,8 +17,6 @@ const CardContentWrapper = styled.div<{ changeDirection: boolean }>`
 
   @media (max-width: 1000px) {
     ${({ changeDirection }) => changeDirection && 'flex-direction: column;'}
-
-    padding: 0 5%;
   }
 `
 
