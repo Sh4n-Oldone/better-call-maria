@@ -5,13 +5,12 @@ import { getSkillsText } from 'utils'
 import { colorScheme } from 'shared'
 import { SecondaryHeadingText } from 'src/styled'
 import { SubtitleText } from '../shared'
-import { SkillsTabs } from './SkillsTabs'
+// import { SkillsTabs } from './SkillsTabs'
 
 const MainWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 100%; */
   max-width: 1880px;
   background-color: ${colorScheme.palette.gray};
   border-radius: 42px;
@@ -45,7 +44,7 @@ export const SkillsBlock: React.FC = () => {
 				</ModSubtitleText>
 			</HeaderWrapper>
 
-			<SkillsTabs />
+			{/* <SkillsTabs /> */}
 		</MainWrapper>
 	)
 }

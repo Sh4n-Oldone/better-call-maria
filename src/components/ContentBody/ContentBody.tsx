@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { StartBlock } from './StartBlock'
 import { AboutMeBlock } from './AboutMeBlock'
-// import { SkillsBlock } from './SkillsBlock'
+import { SkillsBlock } from './SkillsBlock'
 import { CasesBlock } from './CasesBlock'
 import { OtherProjectsBlock } from './OtherProjectsBlock'
 import { colorScheme } from 'shared'
@@ -68,7 +68,7 @@ export const ContentBody: React.FC = () => {
 			<StartBlock />
 			<BackgroundWrapper width={width} size={scrollbarSize}>
 				<AboutMeBlock />
-				{/* <SkillsBlock /> */}
+				<SkillsBlock />
 			</BackgroundWrapper>
 			<CasesBlock />
 			<OtherProjectsBlock />
