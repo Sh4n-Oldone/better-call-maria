@@ -24,10 +24,10 @@ const LeftContentWrapper = styled.div`
   display: flex;
   flex: 0.55;
   padding: 3% 5%;
+  width: 100%;
 
   @media (max-width: 940px) {
     flex: 1;
-    width: 100%;
   }
 `
 
