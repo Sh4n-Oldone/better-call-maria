@@ -40,8 +40,17 @@ const TabsWrapper = styled.div`
       outline: none;
     }
   }
+
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `
 
+const getTabInlineStyle = (isActive: boolean) => ({
+	backgroundColor: isActive ? colorScheme.palette.black : '',
+	borderColor: isActive ? colorScheme.palette.black : '',
+	color: isActive ? colorScheme.palette.white : '',
+})
 const tabPanelInlineStyle = {
 	paddingTop: '32px',
 	paddingBottom: '118px',
@@ -64,16 +73,7 @@ export const SkillsTabs: React.FC = () => {
 			<Tabs onChange={handleTabChange} width={'100%'}>
 				<TabList>
 					{tabs.map((tab, index) => (
-						<Tab
-							key={tab}
-							style={{
-								backgroundColor:
-									index === tabIndex ? colorScheme.palette.black : '',
-								borderColor:
-									index === tabIndex ? colorScheme.palette.black : '',
-								color: index === tabIndex ? colorScheme.palette.white : '',
-							}}
-						>
+						<Tab key={tab} style={getTabInlineStyle(index === tabIndex)}>
 							{tab}
 						</Tab>
 					))}

@@ -15,7 +15,7 @@ export const TitleContainer = styled.div`
   gap: 10px;
 
   @media (max-width: 1000px) {
-    padding: 0 5% 20px;
+    padding: 20px 0;
   }
 `
 export const Title = styled.span`

@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import Carousel from 'nuka-carousel'
+// import Carousel from 'nuka-carousel'
 import { MethodsTabs } from './types'
 import {
-	getMethodIndex,
-	getMethodTab,
-	getMethodTabAnalysisText,
-	getMethodTabFormationText,
+	// getMethodIndex,
+	// getMethodTab,
+	// getMethodTabAnalysisText,
+	// getMethodTabFormationText,
 	getMethodTabResearchText,
-	getMethodTabTestingText,
+	// getMethodTabTestingText,
 } from './utils'
 import { Langs } from 'types'
 import { useLangStore } from 'stores'
@@ -97,35 +97,35 @@ const ResearchTab: React.FC<ITabProps> = ({ lang }) => (
 	</TabOuterContainer>
 )
 
-const AnalysisTab: React.FC<ITabProps> = ({ lang }) => (
-	<TabOuterContainer>
-		<TabContainer>
-			<TabImage src='/analysis_photo.png' />
-			<TabSmallImage src='/analysis_icon.png' />
-			<TabText>{getMethodTabAnalysisText(lang)}</TabText>
-		</TabContainer>
-	</TabOuterContainer>
-)
+// const AnalysisTab: React.FC<ITabProps> = ({ lang }) => (
+// 	<TabOuterContainer>
+// 		<TabContainer>
+// 			<TabImage src='/analysis_photo.png' />
+// 			<TabSmallImage src='/analysis_icon.png' />
+// 			<TabText>{getMethodTabAnalysisText(lang)}</TabText>
+// 		</TabContainer>
+// 	</TabOuterContainer>
+// )
 
-const FormationTab: React.FC<ITabProps> = ({ lang }) => (
-	<TabOuterContainer>
-		<TabContainer>
-			<TabImage src='/formation_photo.png' />
-			<TabSmallImage src='/formation_icon.png' />
-			<TabText>{getMethodTabFormationText(lang)}</TabText>
-		</TabContainer>
-	</TabOuterContainer>
-)
+// const FormationTab: React.FC<ITabProps> = ({ lang }) => (
+// 	<TabOuterContainer>
+// 		<TabContainer>
+// 			<TabImage src='/formation_photo.png' />
+// 			<TabSmallImage src='/formation_icon.png' />
+// 			<TabText>{getMethodTabFormationText(lang)}</TabText>
+// 		</TabContainer>
+// 	</TabOuterContainer>
+// )
 
-const TestingTab: React.FC<ITabProps> = ({ lang }) => (
-	<TabOuterContainer>
-		<TabContainer>
-			<TabImage src='/testing_photo.png' />
-			<TabSmallImage src='/testing_icon.png' />
-			<TabText>{getMethodTabTestingText(lang)}</TabText>
-		</TabContainer>
-	</TabOuterContainer>
-)
+// const TestingTab: React.FC<ITabProps> = ({ lang }) => (
+// 	<TabOuterContainer>
+// 		<TabContainer>
+// 			<TabImage src='/testing_photo.png' />
+// 			<TabSmallImage src='/testing_icon.png' />
+// 			<TabText>{getMethodTabTestingText(lang)}</TabText>
+// 		</TabContainer>
+// 	</TabOuterContainer>
+// )
 
 export const MethodsCardContent: React.FC<IProps> = ({
 	activeTab,
@@ -133,13 +133,16 @@ export const MethodsCardContent: React.FC<IProps> = ({
 }) => {
 	const currLang = useLangStore((state) => state.langTheme)
 
-	const handleDrag = (newIndex: number) => {
-		onTabChange(getMethodTab(newIndex))
-	}
+	// const handleDrag = (newIndex: number) => {
+	// 	onTabChange(getMethodTab(newIndex))
+	// }
+
+	console.log('activeTab', activeTab)
+	console.log('onTabChange', onTabChange)
 
 	return (
 		<CarouselWrapper>
-			<Carousel
+			{/* <Carousel
 				slideIndex={getMethodIndex(activeTab)}
 				style={{ height: '100%' }}
 				renderCenterLeftControls={() => null}
@@ -151,7 +154,9 @@ export const MethodsCardContent: React.FC<IProps> = ({
 				<AnalysisTab lang={currLang} />
 				<FormationTab lang={currLang} />
 				<TestingTab lang={currLang} />
-			</Carousel>
+			</Carousel> */}
+
+			<ResearchTab lang={currLang} />
 		</CarouselWrapper>
 	)
 }
