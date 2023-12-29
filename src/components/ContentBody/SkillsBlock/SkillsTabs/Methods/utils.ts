@@ -54,7 +54,7 @@ export const getMethodTabResearchText = (lang: Langs) => {
 		case Langs.EN:
 			return 'We get the initial data. We collect all available material on the topic, study the existing documentation and form a brief.'
 		case Langs.RU:
-			return 'Получаем вводные данные. Собираем весь доступный материал по теме, изучаем существующую документацию и формируем бриф.'
+			return 'We get the initial data. We collect all available material on the topic, study the existing documentation and form a brief.'
 		default:
 			return ''
 	}
@@ -65,7 +65,7 @@ export const getMethodTabAnalysisText = (lang: Langs) => {
     case Langs.EN:
       return 'We analyze the collected data, study the target audience, competitors and the market as a whole.'
     case Langs.RU:
-      return 'Получаем вводные данные. Собираем весь доступный материал по теме, изучаем существующую документацию и формируем бриф.'
+      return 'We analyze the collected data, study the target audience, competitors and the market as a whole.'
     default:
       return ''
   }
@@ -76,7 +76,7 @@ export const getMethodTabFormationText = (lang: Langs) => {
     case Langs.EN:
       return 'We form the concept of the project, create a prototype, develop a design and prepare the project for implementation.'
     case Langs.RU:
-      return 'Получаем вводные данные. Собираем весь доступный материал по теме, изучаем существующую документацию и формируем бриф.'
+      return 'We form the concept of the project, create a prototype, develop a design and prepare the project for implementation.'
     default:
       return ''
   }
@@ -87,7 +87,7 @@ export const getMethodTabTestingText = (lang: Langs) => {
     case Langs.EN:
       return 'We test the project, make edits and prepare it for launch.'
     case Langs.RU:
-      return 'Получаем вводные данные. Собираем весь доступный материал по теме, изучаем существующую документацию и формируем бриф.'
+      return 'Русский текст'
     default:
       return ''
   }

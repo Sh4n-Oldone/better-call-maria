@@ -100,12 +100,13 @@ const TabSmallImage = styled.img`
   height: 32px;
   margin-right: auto;
 `
-const TabText = styled.p`
+const TabText = styled.span`
   margin-top: 25px;
   margin-right: auto;
 
   @media (max-width: 940px) {
     margin-bottom: 100px;
+    max-width: 100%;
   }
 `
 
@@ -165,7 +166,7 @@ export const MethodsCardContent: React.FC<IProps> = ({
 			<CarouselWrapper>
 				<Carousel
 					slideIndex={getMethodIndex(activeTab)}
-					style={{ height: '100%', overflow: 'hidden' }}
+					style={{ height: '100%' }}
 					renderCenterLeftControls={() => null}
 					renderCenterRightControls={() => null}
 					afterSlide={handleDrag}

@@ -21,7 +21,7 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 86px;
+  width: 88px;
   padding: 6px 10px;
   border-radius: 12px;
   color: ${colorScheme.palette.white};
