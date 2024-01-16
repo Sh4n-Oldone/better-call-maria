@@ -280,5 +280,61 @@
         ]
       }
     }
+  },
+  "cases": {
+    "title": {
+      "RU": "Кейсы",
+      "EN": "Cases"
+    },
+    "subtitle": {
+      "RU": "Тезисно рассказываю про опыт работы и продукты, в которых работала. Честно и просто про проблемы и их решение.",
+      "EN": "I briefly talk about my work experience and the products I worked in. Honestly and simply about the problems and their solution."
+    },
+    "cards": [
+      {
+        "title": "Digital HR Platform",
+        "subtitle": {
+          "RU": "Готовые решения для бизнеса в сфере линейного рекрутмента.",
+          "EN": "Ready-made solutions for business in the field of linear recruitment."
+        },
+        "date": {
+          "RU": "Январь 2022 г. - Настоящий момент",
+          "EN": "January 2022 - Present"
+        }
+      },
+      {
+        "title": "Athena-plus",
+        "subtitle": {
+          "RU": "Разработка и дизайн IT-продуктов с нуля до запуска",
+          "EN": "Development and design of IT products from scratch to launch"
+        },
+        "date": {
+          "RU": "Сентябрь 2020 г. - Январь 2022 г.",
+          "EN": "September 2020 - January 2022"
+        }
+      }, 
+      {
+        "title": "Admixer",
+        "subtitle": {
+          "RU": "Продвижение продуктов на рынке, услуги полного цикла разработки.",
+          "EN": "Promotion of products on the market, full cycle development services."
+        },
+        "date": {
+          "RU": "Март 2019 г. - Март 2020 г.",
+          "EN": "March 2019 - March 2020"
+        }
+      },
+      {
+        "title": "Design projects",
+        "subtitle": {
+          "RU": "Проекты, которые я вела part-time в течение нескольких лет",
+          "EN": "Projects that I have been leading part-time for several years"
+        },
+        "date": {
+          "RU": "2020 г. - 2023 г.",
+          "EN": "2020 - 2023"
+        }
+      }
+    ]
   }
 }

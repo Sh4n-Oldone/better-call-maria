@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { App } from './App'
 import Developer from '../routes/Developer'
+import Case from '../routes/Case'
 import NotFound from '../routes/NotFound'
 
 export const router = createBrowserRouter([
@@ -12,6 +13,14 @@ export const router = createBrowserRouter([
 			{
 				path: '/developer',
 				element: <Developer />,
+			},
+			{
+				path: '/case/:id',
+				element: <Case />,
+			},
+			{
+				path: '*',
+				element: <NotFound />,
 			},
 		],
 	},

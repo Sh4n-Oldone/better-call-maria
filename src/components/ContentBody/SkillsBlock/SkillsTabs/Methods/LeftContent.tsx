@@ -100,6 +100,7 @@ const ArrowImage = styled(Image)`
   }
 `
 const ButtonText = styled.span`
+  display: flex;
   font-size: 16px;
   font-weight: 600;
   line-height: 36px;

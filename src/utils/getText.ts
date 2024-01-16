@@ -4,6 +4,7 @@ import jsonData from './text.json'
 type StartBlocks = 'title' | 'subtitle' | 'callMeButton'
 type AboutMeBlocks = 'title' | 'hello' | 'lastYears' | 'accordion'
 type SkillsBlocks = 'title' | 'subtitle' | 'tabs' | 'tabsContent'
+type CasesBlocks = 'title' | 'subtitle' | 'cards'
 
 // type SkillsTabsSkills = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList' | 'skillsListTitle' | 'skillsList'
 // type SkillsTabsManagement = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList'
@@ -21,6 +22,16 @@ type AboutMeAccordionItem = {
 type MappedAboutMeAccordionItem = {
   title: string
   content: string[]
+}
+type CasesCard = {
+  title: string
+  subtitle: {[key in Langs]: string}
+  date: {[key in Langs]: string}
+}
+export type CasesCardItem = {
+  title: string
+  subtitle: string
+  date: string
 }
 
 const textDataObj = JSON.parse(JSON.stringify(jsonData))
@@ -40,6 +51,8 @@ export const getSkillsText = (lang: Langs, block: Exclude<SkillsBlocks, 'tabs'>)
   textDataObj.skills[block][lang]
 export const getSkillsTabs = (lang: Langs): string[] =>
   textDataObj.skills.tabs.map((tab: LangStringArray) => tab[lang])
+export const getCasesText = (lang: Langs, block: CasesBlocks) =>
+  textDataObj.cases[block][lang]
 
 export const getNavLinks = (lang: Langs) => {
   const links = Object.keys(textDataObj.navigation).map((route) => ({
@@ -120,3 +133,10 @@ export const getSkillsTabsMethodsContent = (lang: Langs) => {
     secondSubtitle: secondSubtitle[lang] as string,
   }
 }
+
+export const getCasesCards = (lang: Langs): CasesCardItem[] =>
+  textDataObj.cases.cards.map((card: CasesCard) => ({
+    title: card.title,
+    subtitle: card.subtitle[lang],
+    date: card.date[lang],
+  }))

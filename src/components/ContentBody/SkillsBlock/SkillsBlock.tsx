@@ -4,7 +4,7 @@ import { useLangStore } from 'stores'
 import { getSkillsText } from 'utils'
 import { colorScheme } from 'shared'
 import { SecondaryHeadingText } from 'src/styled'
-import { SubtitleText } from '../shared'
+import { HeaderWrapper, SubtitleText } from '../shared'
 import { SkillsTabs } from './SkillsTabs'
 
 const MainWrapper = styled.section`
@@ -16,13 +16,6 @@ const MainWrapper = styled.section`
   border-radius: 42px;
   margin-top: 20px;
   padding-top: 72px;
-`
-const HeaderWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
 `
 const ModSubtitleText = styled(SubtitleText)`
   max-width: 572px;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { StartBlock } from './StartBlock'
 import { AboutMeBlock } from './AboutMeBlock'
 import { SkillsBlock } from './SkillsBlock'
-import { CasesBlock } from './CasesBlock'
+import { CasesBlock, CasesBlobsScreen } from './CasesBlock'
 import { OtherProjectsBlock } from './OtherProjectsBlock'
 import { colorScheme } from 'shared'
 
@@ -14,7 +14,11 @@ const BodyWrapper = styled.div`
   justify-content: center;
   width: 100%;
 `
-const BackgroundWrapper = styled.div<{ width: number; size: number }>`
+const BackgroundWrapper = styled.div<{
+	isBlack?: boolean
+	width: number
+	size: number
+}>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -37,6 +41,8 @@ const BackgroundWrapper = styled.div<{ width: number; size: number }>`
       ${colorScheme.palette.gray} 0%, 
       ${colorScheme.palette.gray} 55%,
       ${colorScheme.palette.white} 100%);
+    ${({ isBlack }) =>
+			isBlack && `background: ${colorScheme.palette.black};`}
     z-index: -1;
   }
 `
@@ -70,7 +76,10 @@ export const ContentBody: React.FC = () => {
 				<AboutMeBlock />
 				<SkillsBlock />
 			</BackgroundWrapper>
-			<CasesBlock />
+			<BackgroundWrapper isBlack width={width} size={scrollbarSize}>
+				<CasesBlobsScreen />
+				<CasesBlock />
+			</BackgroundWrapper>
 			<OtherProjectsBlock />
 		</BodyWrapper>
 	)
