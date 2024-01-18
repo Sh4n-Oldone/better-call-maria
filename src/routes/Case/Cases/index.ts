@@ -1,4 +1,4 @@
 export { DHRP } from './DHRP'
 export { Athena } from './Athena'
-export { Admixer } from './Admixer'
+export { ADM } from './ADM'
 export { Design } from './Design'

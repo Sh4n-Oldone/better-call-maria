@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useLangStore } from 'stores'
 import { getStartText } from 'utils'
 import { colorScheme } from 'shared'
+import { ContactIcon } from './ContactIcon'
 
 const BorderWrapper = styled.div`
   max-width: 110px;
@@ -14,6 +15,10 @@ const BorderWrapper = styled.div`
   );
   padding: 1px;
   border-radius: 12px;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `
 const Button = styled.button`
   all: unset;
@@ -41,6 +46,59 @@ const Button = styled.button`
     outline: 0;
   }
 `
+const ButtonIcon = styled.div`
+  display: none;
+  padding: 6px;
+  transform: scale(1.3);
+  border: 1px solid #E2E8F0;
+  border-radius: 0.375rem;
+
+  > svg:hover {
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-name: shake;
+    animation-duration: 700ms;
+  
+    @keyframes shake {
+      0% {
+        transform: rotate(0deg);
+      }
+    
+      10% {
+        transform: rotate(5deg) scale(1.1);
+      }
+
+      15% {
+        transform: rotate(0deg);
+      }
+
+      30% {
+        transform: rotate(5deg) scale(1.1);
+      }
+
+      40% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #EDF2F7;
+    border-color: #646cff;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
 
 export const ContactMeButton: React.FC = () => {
 	const currLang = useLangStore((state) => state.langTheme)
@@ -48,10 +106,16 @@ export const ContactMeButton: React.FC = () => {
 	const handleClick = () => {}
 
 	return (
-		<BorderWrapper>
-			<Button onClick={handleClick}>
-				{getStartText(currLang, 'callMeButton')}
-			</Button>
-		</BorderWrapper>
+		<>
+			<BorderWrapper>
+				<Button onClick={handleClick}>
+					{getStartText(currLang, 'callMeButton')}
+				</Button>
+			</BorderWrapper>
+
+			<ButtonIcon onClick={handleClick}>
+				<ContactIcon />
+			</ButtonIcon>
+		</>
 	)
 }
