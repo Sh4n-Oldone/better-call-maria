@@ -86,6 +86,11 @@ const ColumnLink = styled.li`
   line-height: 24px;
   color: ${colorScheme.grayFamily.gray_4};
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    /* font-size: 12px; */
+    text-align: center;
+  }
 `
 
 const CustomLinkItem: React.FC<FooterLink> = ({
