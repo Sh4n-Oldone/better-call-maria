@@ -66,12 +66,16 @@ const ColumnLinks = styled.ul`
   flex-direction: column;
   gap: 24px;
   list-style: none;
-  padding: 0;
+  padding: 16px;
   margin: 0;
 
   @media (max-width: 1100px) {
     justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    gap: 16px;
   }
 `
 const ColumnLink = styled.li`

@@ -5,6 +5,10 @@ import { AdditionalLinksKeys } from './utils'
 const IconsContainer = styled.div`
   display: flex;
   gap: 16px;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
 `
 const IconLink = styled.a`
   display: flex;
