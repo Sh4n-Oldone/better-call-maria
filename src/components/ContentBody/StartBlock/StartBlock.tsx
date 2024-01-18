@@ -20,6 +20,10 @@ const MainContainerWrapper = styled.div`
   justify-content: center;
   width: 90%;
   margin-top: auto;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `
 const Checkers = styled.div`
   position: absolute;

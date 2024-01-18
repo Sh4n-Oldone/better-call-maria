@@ -20,6 +20,7 @@ export const HeadingText = styled.h1`
   color: ${colorScheme.palette.black};
   margin: 0;
   padding: 0;
+  word-wrap: normal;
 `
 
 export const SecondaryHeadingText = styled.h2`
