@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { StartBlock } from './StartBlock'
 import { AboutMeBlock } from './AboutMeBlock'
@@ -6,6 +6,7 @@ import { SkillsBlock } from './SkillsBlock'
 import { CasesBlock, CasesBlobsScreen } from './CasesBlock'
 import { OtherProjectsBlock } from './OtherProjectsBlock'
 import { colorScheme } from 'shared'
+import { useScreenSize } from 'hooks'
 
 const BodyWrapper = styled.div`
   display: flex;
@@ -48,26 +49,7 @@ const BackgroundWrapper = styled.div<{
 `
 
 export const ContentBody: React.FC = () => {
-	const [width, setWidth] = useState(window.innerWidth ?? 0)
-	const [scrollbarSize, setScrollbarSize] = useState(0)
-
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	useEffect(() => {
-		setScrollbarSize(
-			window.innerWidth - document.documentElement.clientWidth,
-		)
-	}, [document.documentElement.clientWidth])
-
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	useEffect(() => {
-		const handleResize = () => setWidth(window.innerWidth ?? 2)
-
-		window.addEventListener('resize', handleResize)
-
-		return () => {
-			window.removeEventListener('resize', handleResize)
-		}
-	}, [window.innerWidth])
+	const { width, scrollbarSize } = useScreenSize()
 
 	return (
 		<BodyWrapper>

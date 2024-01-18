@@ -20,7 +20,7 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   width: 342px;
-  margin: 0 16px 16px;
+  margin: 0 16px;
   background-color: #fff;
   border-radius: 32px 32px 0 0;
   backdrop-filter: blur(10px);

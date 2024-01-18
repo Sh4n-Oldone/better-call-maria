@@ -3,23 +3,39 @@ import { useLocation, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useLangStore } from 'stores'
 import { colorScheme } from 'shared'
+import { useScreenSize } from 'hooks'
 import { FooterLink, getColumns } from './utils'
 import { IconsLinks } from './IconsLinks'
 
 const FooterWrapper = styled.footer`
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
-  background: linear-gradient(0deg, #171323 0%, #0F0F0F 100%);
   padding: 44px 0;
-  z-index: 10;
 `
-const FooterContentWrapper = styled.div`
+const FooterContentWrapper = styled.div<{
+	width: number
+	size: number
+}>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1048px;
+  z-index: 11;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(-100vw / 2 + ${({ width, size }) =>
+			width > 1880 ? 940 : width / 2 - size}px);
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(0deg, #171323 0%, #0F0F0F 100%);
+    z-index: -1;
+  }
 
   @media (max-width: 1100px) {
     display: grid;
@@ -97,12 +113,13 @@ const CustomLinkItem: React.FC<FooterLink> = ({
 
 export const Footer: React.FC = () => {
 	const currLang = useLangStore((state) => state.langTheme)
+	const { width, scrollbarSize } = useScreenSize()
 
 	const columns = getColumns(currLang)
 
 	return (
 		<FooterWrapper>
-			<FooterContentWrapper>
+			<FooterContentWrapper width={width} size={scrollbarSize}>
 				{columns.map(({ title, links }) => (
 					<Column key={title}>
 						<ColumnTitle>{title}</ColumnTitle>
