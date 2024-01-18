@@ -72,8 +72,8 @@ export const blockLinks: BlockLinks[][]= [
       localLink: '#cases',
       globalLink: null,
     }, {
-      RU: 'Как я стала дизайнером',
-      EN: 'How I became a designer',
+      RU: 'Путь в UX',
+      EN: 'My UX path',
       localLink: null,
       globalLink: 'https://i.imgur.com/PTqE2su.png',
     }
