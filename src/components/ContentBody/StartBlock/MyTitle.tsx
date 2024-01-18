@@ -13,6 +13,10 @@ const TitleContainer = styled.div`
   width: 90%;
   max-width: 990px;
   margin-top: 14px;
+
+  @media (max-width: 856px) {
+    width: 100%;
+  }
 `
 const SubtitleContainer = styled.div`
   display: flex;
@@ -22,6 +26,10 @@ const SubtitleContainer = styled.div`
   width: 75%;
   max-width: 686px;
   margin-top: 25px;
+
+  @media (max-width: 856px) {
+    width: 90%;
+  }
 `
 
 export const MyTitle: React.FC = () => {

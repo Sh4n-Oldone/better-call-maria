@@ -88,7 +88,6 @@ const ColumnLink = styled.li`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    font-size: 12px;
     text-align: center;
   }
 `
