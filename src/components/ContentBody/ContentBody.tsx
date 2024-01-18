@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { colorScheme } from 'shared'
+import { useScreenSize } from 'hooks'
 import { StartBlock } from './StartBlock'
 import { AboutMeBlock } from './AboutMeBlock'
 import { SkillsBlock } from './SkillsBlock'
 import { CasesBlock, CasesBlobsScreen } from './CasesBlock'
 import { OtherProjectsBlock } from './OtherProjectsBlock'
-import { colorScheme } from 'shared'
-import { useScreenSize } from 'hooks'
 
 const BodyWrapper = styled.div`
   display: flex;
