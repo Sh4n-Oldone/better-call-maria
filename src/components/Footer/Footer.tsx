@@ -47,6 +47,7 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   gap: 44px;
+  padding: 16px;
 
   @media (max-width: 1100px) {
     justify-content: center;
@@ -66,7 +67,6 @@ const ColumnLinks = styled.ul`
   flex-direction: column;
   gap: 24px;
   list-style: none;
-  padding: 16px;
   margin: 0;
 
   @media (max-width: 1100px) {
