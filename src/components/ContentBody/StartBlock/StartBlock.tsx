@@ -5,6 +5,7 @@ import { IdeaToProfit } from './IdeaToProfit'
 import { MyTitle, MySubTitle } from './MyTitle'
 import { CallMeButton } from './CallMeButton'
 import { Workspace } from './Workspace'
+import { BusinessCard } from './BusinessCard/BusinessCard'
 
 const MainWrapper = styled.section`
   display: flex;
@@ -52,19 +53,18 @@ const ContentContainer = styled.div`
   padding-top: 130px;
 `
 
-export const StartBlock: React.FC = () => {
-	return (
-		<MainWrapper id='start'>
-			<MainContainerWrapper>
-				<Checkers />
-				<ContentContainer>
-					<IdeaToProfit />
-					<MyTitle />
-					<MySubTitle />
-					<CallMeButton />
-					<Workspace />
-				</ContentContainer>
-			</MainContainerWrapper>
-		</MainWrapper>
-	)
-}
+export const StartBlock: React.FC = () => (
+	<MainWrapper id='start'>
+		<MainContainerWrapper>
+			<Checkers />
+			<ContentContainer>
+				<IdeaToProfit />
+				<MyTitle />
+				<MySubTitle />
+				<CallMeButton />
+				<Workspace />
+				<BusinessCard />
+			</ContentContainer>
+		</MainContainerWrapper>
+	</MainWrapper>
+)
