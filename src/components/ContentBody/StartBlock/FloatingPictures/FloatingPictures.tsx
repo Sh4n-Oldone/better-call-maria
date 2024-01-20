@@ -95,7 +95,7 @@ const ToolboxImage = styled(AbsoluteImage)`
     }
 
     100% {
-      transform: translateY(20px) rotate(6deg);
+      transform: translateY(20px) rotate(9deg);
     }
   }
 
@@ -110,7 +110,7 @@ const PointerImage = styled(AbsoluteImage)`
   bottom: 30%;
   right: 7%;
 
-  animation: pointer-bounce 5s ease-in-out infinite alternate;
+  animation: pointer-bounce 9s ease-in-out infinite alternate;
 
   @keyframes pointer-bounce {
     0% {
