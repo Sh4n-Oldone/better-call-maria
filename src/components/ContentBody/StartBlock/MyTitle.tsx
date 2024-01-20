@@ -6,6 +6,7 @@ import { getStartText } from 'utils'
 import { SubtitleText } from '../shared'
 
 const TitleContainer = styled.div`
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +20,7 @@ const TitleContainer = styled.div`
   }
 `
 const SubtitleContainer = styled.div`
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;

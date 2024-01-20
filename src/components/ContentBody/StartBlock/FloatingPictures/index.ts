@@ -1,0 +1,1 @@
+export { FloatingPictures } from './FloatingPictures'

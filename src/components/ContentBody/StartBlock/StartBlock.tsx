@@ -5,7 +5,8 @@ import { IdeaToProfit } from './IdeaToProfit'
 import { MyTitle, MySubTitle } from './MyTitle'
 import { CallMeButton } from './CallMeButton'
 import { Workspace } from './Workspace'
-import { BusinessCard } from './BusinessCard/BusinessCard'
+import { FloatingPictures } from './FloatingPictures'
+import { BusinessCard } from './BusinessCard'
 
 const MainWrapper = styled.section`
   display: flex;
@@ -28,6 +29,7 @@ const MainContainerWrapper = styled.div`
 `
 const Checkers = styled.div`
   position: absolute;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,6 +47,7 @@ const Checkers = styled.div`
 `
 const ContentContainer = styled.div`
   position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,8 +66,9 @@ export const StartBlock: React.FC = () => (
 				<MySubTitle />
 				<CallMeButton />
 				<Workspace />
-				<BusinessCard />
 			</ContentContainer>
+			<FloatingPictures />
+			<BusinessCard />
 		</MainContainerWrapper>
 	</MainWrapper>
 )

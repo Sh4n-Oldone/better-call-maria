@@ -13,6 +13,7 @@ const Container = styled.div`
   border: 1px solid ${colorScheme.grayFamily.gray_4};
   border-radius: 8px;
   gap: 10px;
+  z-index: 10;
 `
 const TextContainer = styled.div`
   display: flex;

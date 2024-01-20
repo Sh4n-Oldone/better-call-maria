@@ -6,6 +6,7 @@ import { InnerContainerContent } from './InnerContainerContent'
 
 const MainContainer = styled.div`
   position: absolute;
+  z-index: 15;
   display: flex;
   flex-direction: column;
   width: 280px;
