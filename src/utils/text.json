@@ -336,5 +336,87 @@
         }
       }
     ]
+  },
+  "otherProjects": {
+    "title": {
+      "RU": "Другие проекты и активности",
+      "EN": "Other projects and activities"
+    },
+    "subtitle": {
+      "RU": "Этот блок не про работу, а про свободное время. Давайте знакомиться! Обещаю, что про дизайн тут тоже кое-что найдется :)",
+      "EN": "This block is not about work, but about free time. Let's get acquainted! I promise that there will also be something about design here :)"
+    },
+    "projects": [
+      {
+        "dates": {
+          "RU": "Сентябрь 2023 - Ноябрь 2023",
+          "EN": "September 2023 - November 2023"
+        },
+        "title": {
+          "RU": "Подаюсь в Y-combinator",
+          "EN": "Applying to Y-combinator"
+        },
+        "subtitle": {
+          "RU": "Простая классная идея создания голосового чата, в котором ты можешь общаться с ИИ как со старым знакомым. Никаких примитивных шаблонных ответов и информации из Википедии.",
+          "EN": "A simple cool idea of creating a voice chat where you can chat with AI like an old friend. No primitive template responses or information from Wikipedia."
+        }
+      },
+      {
+        "dates": {
+          "RU": "Сентябрь 2023 - Настоящий момент",
+          "EN": "September 2023 - Present"
+        },
+        "title": {
+          "RU": "Пишу песни на разных языках",
+          "EN": "Writing songs in different languages"
+        },
+        "subtitle": {
+          "RU": "Я играю на гитаре и периодически выкладываю свои песни на просторы Youtube. Никакой конкретной цели в этом нет, есть только путь (как у воина).",
+          "EN": "I play the guitar and periodically post my songs on the expanses of Youtube. There is no specific goal in this, there is only a path (like a warrior)."
+        }
+      },
+      {
+        "dates": {
+          "RU": "Январь 2023 - Настоящий момент",
+          "EN": "January 2023 - Present"
+        },
+        "title": {
+          "RU": "Один из создателей UX Speaking Club",
+          "EN": "One of the creators of UX Speaking Club"
+        },
+        "subtitle": {
+          "RU": "Когда-то давно мы с ребятами создали Speaking Club для дизайнеров, целью которого было научить рассказывать о своих проектах на английском и проходить собеседования.",
+          "EN": "Once upon a time, we guys created a Speaking Club for designers, the goal of which was to teach you how to talk about your projects in English and pass interviews."
+        }
+      },
+      {
+        "dates": {
+          "RU": "Февраль 2022 - Настоящий момент",
+          "EN": "February 2022 - Present"
+        },
+        "title": {
+          "RU": "Активничаю в Design Spot и Нетологии",
+          "EN": "Active in Design Spot and Netology"
+        },
+        "subtitle": {
+          "RU": "Периодически выступаю в качестве модератора в Design Spot, менторю в Нетологии, а именно проверяю работы начинающих дизайнеров и даю рекомендации.",
+          "EN": "Periodically act as a moderator in Design Spot, mentor in Netology, namely check the work of novice designers and give recommendations."
+        }
+      },
+      {
+        "dates": {
+          "RU": "Август 2020 - Настоящий момент",
+          "EN": "August 2020 - Present"
+        },
+        "title": {
+          "RU": "Рисую и пишу про дизайн",
+          "EN": "I draw and write about design"
+        },
+        "subtitle": {
+          "RU": "Мечтаю освоить 3D, но пока что просто рисую от руки и периодически пишу про дизайн. В своих блогах придумываю и интегрирую много классных активностей, курирую программы.",
+          "EN": "I dream of mastering 3D, but for now I just draw by hand and periodically write about design. In my blogs, I come up with and integrate a lot of cool activities, curate programs."
+        }
+      }
+    ]
   }
 }

@@ -13,3 +13,9 @@ export const HeaderWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
 `
+
+export const ModSubtitleText = styled(SubtitleText)`
+  max-width: 572px;
+  margin-top: 16px;
+  text-align: center;
+`

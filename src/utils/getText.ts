@@ -5,11 +5,11 @@ type StartBlocks = 'title' | 'subtitle' | 'callMeButton'
 type AboutMeBlocks = 'title' | 'hello' | 'lastYears' | 'accordion'
 type SkillsBlocks = 'title' | 'subtitle' | 'tabs' | 'tabsContent'
 type CasesBlocks = 'title' | 'subtitle' | 'cards'
+type OtherProjectsBlocks = 'title' | 'subtitle' | 'projects'
 
 // type SkillsTabsSkills = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList' | 'skillsListTitle' | 'skillsList'
 // type SkillsTabsManagement = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'methodsListTitle' | 'methodsList'
 // type SkillsTabsPrograms = 'title' | 'firstSubtitle' | 'secondSubtitle' | 'programsListTitle' | 'programsList'
-
 
 type LangStringArray = {
   [key in Langs]: string
@@ -33,6 +33,21 @@ export type CasesCardItem = {
   subtitle: string
   date: string
 }
+export type MappedOtherProjectsProject = {
+  dates: string
+  title: string
+  subtitle: string
+}
+type OtherProjectsProject = {
+  dates: {[key in Langs]: string}
+  title: {[key in Langs]: string}
+  subtitle: {[key in Langs]: string}
+}
+type OtherProjects = {
+  title: {[key in Langs]: string}
+  subtitle: {[key in Langs]: string}
+  projects: OtherProjectsProject[]
+}
 
 const textDataObj = JSON.parse(JSON.stringify(jsonData))
 
@@ -53,6 +68,8 @@ export const getSkillsTabs = (lang: Langs): string[] =>
   textDataObj.skills.tabs.map((tab: LangStringArray) => tab[lang])
 export const getCasesText = (lang: Langs, block: CasesBlocks) =>
   textDataObj.cases[block][lang]
+export const getOtherProjectsText = (lang: Langs, block: OtherProjectsBlocks) =>
+  textDataObj.otherProjects[block][lang]
 
 export const getNavLinks = (lang: Langs) => {
   const links = Object.keys(textDataObj.navigation).map((route) => ({
@@ -140,3 +157,13 @@ export const getCasesCards = (lang: Langs): CasesCardItem[] =>
     subtitle: card.subtitle[lang],
     date: card.date[lang],
   }))
+
+export const getOtherProjectsProjects = (lang: Langs): MappedOtherProjectsProject[]=> {
+  const { projects } = textDataObj.otherProjects as OtherProjects
+
+  return projects.map((project: OtherProjectsProject) => ({
+    dates: project.dates[lang],
+    title: project.title[lang],
+    subtitle: project.subtitle[lang],
+  }))
+}

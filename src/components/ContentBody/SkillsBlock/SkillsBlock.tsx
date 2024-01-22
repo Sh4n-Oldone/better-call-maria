@@ -4,7 +4,7 @@ import { useLangStore } from 'stores'
 import { getSkillsText } from 'utils'
 import { colorScheme } from 'shared'
 import { SecondaryHeadingText } from 'src/styled'
-import { HeaderWrapper, SubtitleText } from '../shared'
+import { HeaderWrapper, ModSubtitleText } from '../shared'
 import { SkillsTabs } from './SkillsTabs'
 
 const MainWrapper = styled.section`
@@ -16,11 +16,6 @@ const MainWrapper = styled.section`
   border-radius: 42px;
   margin-top: 20px;
   padding-top: 72px;
-`
-const ModSubtitleText = styled(SubtitleText)`
-  max-width: 572px;
-  margin-top: 16px;
-  text-align: center;
 `
 
 export const SkillsBlock: React.FC = () => {

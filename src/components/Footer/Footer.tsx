@@ -30,7 +30,7 @@ const FooterContentWrapper = styled.div<{
     position: absolute;
     top: 0;
     left: calc(-100vw / 2 + ${({ width, size }) =>
-			width > 1880 ? 940 : width / 2 - size}px);
+			width > 1880 ? 960 : width / 2 - size}px);
     width: 100vw;
     height: 100%;
     background: linear-gradient(0deg, #171323 0%, #0F0F0F 100%);

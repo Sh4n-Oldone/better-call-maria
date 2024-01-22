@@ -47,7 +47,7 @@ const CardDate = styled.span`
 `
 const CardTitle = styled.span`
   color: #FFF;
-  font-family: Noto Sans Symbols;
+  font-family: 'Noto Sans Symbols Variable', sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;

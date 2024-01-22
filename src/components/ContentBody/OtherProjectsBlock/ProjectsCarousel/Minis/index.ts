@@ -1,0 +1,5 @@
+export { MiniDoggo } from './MiniDoggo'
+export { MiniYoutube } from './MiniYoutube'
+export { MiniClub } from './MiniClub'
+export { MiniDesignSpot } from './MiniDesignSpot'
+export { MiniCreative } from './MiniCreative'

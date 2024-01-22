@@ -176,7 +176,7 @@ export const InnerContainerContent: React.FC = () => {
 					<Name>{TEXTS.name[currLang]}</Name>
 					<Position>{TEXTS.position[currLang]}</Position>
 				</BottomTextContainer>
-				<Icon src='/logo.png' />
+				<Icon src='/logo.png' alt='logo' />
 			</BottomContainer>
 		</>
 	)
