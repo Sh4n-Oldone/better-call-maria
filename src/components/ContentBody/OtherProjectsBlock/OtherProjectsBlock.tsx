@@ -19,6 +19,7 @@ const MainWrapper = styled.section`
   margin-top: 20px;
   border-radius: 42px;
   background: linear-gradient(180deg, ${colorScheme.gradients.grayToWhite.start} 0%, ${colorScheme.gradients.grayToWhite.end} 70%);
+  overflow: hidden;
 `
 const InnerWrapper = styled.div`
   display: flex;
@@ -35,6 +36,39 @@ const InnerWrapper = styled.div`
   @media (max-width: 768px) {
     margin-top: 90px;
     padding: 32px 5px 0;
+  }
+`
+const BlobWrapper = styled.div`
+  position: relative;
+  width: 100%;
+`
+const Blob = styled.img`
+  position: absolute;
+  z-index: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  width: 100%;
+  animation-name: hop;
+  animation-duration: 7s;
+  left: 0;
+  top: 20px;
+
+  @keyframes hop {
+    from {
+      opacity: 0.7;
+    }
+
+    50% {
+      opacity: 1;
+      filter: blur(1px);
+    }
+
+    to {
+      transform: rotate(13deg) scale(1.1) translateY(7px);
+      filter: hue-rotate(40deg);
+      opacity: 0.8;
+    }
   }
 `
 
@@ -57,6 +91,9 @@ export const OtherProjectsBlock: React.FC = () => {
 
 	return (
 		<MainWrapper id='projects'>
+			<BlobWrapper>
+				<Blob src='/blob_mega.png' alt='blob' />
+			</BlobWrapper>
 			<InnerWrapper>
 				<HeaderWrapper>
 					<SecondaryHeadingText>
