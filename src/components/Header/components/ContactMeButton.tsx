@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import { useLangStore } from 'stores'
 import { getStartText } from 'utils'
 import { colorScheme } from 'shared'
+import { CallMeModal } from 'UIComponents'
 import { ContactIcon } from './ContactIcon'
+import { useDisclosure } from '@chakra-ui/react'
 
 const BorderWrapper = styled.div`
   max-width: 110px;
@@ -101,9 +103,12 @@ const ButtonIcon = styled.div`
 `
 
 export const ContactMeButton: React.FC = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure()
 	const currLang = useLangStore((state) => state.langTheme)
 
-	const handleClick = () => {}
+	const handleClick = () => {
+		onOpen()
+	}
 
 	return (
 		<>
@@ -116,6 +121,8 @@ export const ContactMeButton: React.FC = () => {
 			<ButtonIcon onClick={handleClick}>
 				<ContactIcon />
 			</ButtonIcon>
+
+			<CallMeModal isOpen={isOpen} onClose={onClose} />
 		</>
 	)
 }

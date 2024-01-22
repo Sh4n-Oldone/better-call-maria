@@ -14,6 +14,7 @@ export default defineConfig({
       hooks: '/src/hooks',
       stores: '/src/stores',
       shared: '/src/shared',
+      UIComponents: '/src/UIComponents',
     },
   },
 })

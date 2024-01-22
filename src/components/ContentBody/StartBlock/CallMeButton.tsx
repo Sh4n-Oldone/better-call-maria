@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useDisclosure } from '@chakra-ui/react'
 import { useLangStore } from 'stores'
 import { getStartText } from 'utils'
 import { colorScheme } from 'shared'
+import { CallMeModal } from 'UIComponents'
 
 const Button = styled.button`
   all: unset;
@@ -166,13 +168,20 @@ const Button = styled.button`
 `
 
 export const CallMeButton: React.FC = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure()
 	const currLang = useLangStore((state) => state.langTheme)
 
-	const handleClick = () => {}
+	const handleClick = () => {
+		onOpen()
+	}
 
 	return (
-		<Button onClick={handleClick}>
-			{getStartText(currLang, 'callMeButton')}
-		</Button>
+		<>
+			<Button onClick={handleClick}>
+				{getStartText(currLang, 'callMeButton')}
+			</Button>
+
+			<CallMeModal isOpen={isOpen} onClose={onClose} />
+		</>
 	)
 }
