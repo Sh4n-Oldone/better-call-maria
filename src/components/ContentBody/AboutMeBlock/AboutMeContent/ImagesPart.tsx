@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { useInView } from 'react-intersection-observer'
 import { colorScheme } from 'shared'
 import { getAboutMeText } from 'utils'
 import { useLangStore } from 'stores'
 import { DefaultText } from 'src/styled'
+
+interface IProps {
+	onChangeInView(value: boolean): void
+}
 
 const MainContainer = styled.div`
   display: flex;
@@ -110,8 +115,14 @@ const BottomText = styled(DefaultText)`
   color: ${colorScheme.grayFamily.lightGray};
 `
 
-export const ImagesPart: React.FC = () => {
+export const ImagesPart: React.FC<IProps> = ({ onChangeInView }) => {
+	const { ref, inView } = useInView()
 	const currLang = useLangStore((state) => state.langTheme)
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	useEffect(() => {
+		onChangeInView(inView)
+	}, [inView])
 
 	return (
 		<MainContainer>
@@ -121,7 +132,9 @@ export const ImagesPart: React.FC = () => {
 					<ImageContent>
 						<Image src='/avatar_compressed.png' alt='avatar' />
 					</ImageContent>
-					<HelloText>{getAboutMeText(currLang, 'hello')}</HelloText>
+					<HelloText ref={ref}>
+						{getAboutMeText(currLang, 'hello')}
+					</HelloText>
 				</ImageContainer>
 				<BottomTextContainer>
 					<BottomText>{getAboutMeText(currLang, 'lastYears')}</BottomText>

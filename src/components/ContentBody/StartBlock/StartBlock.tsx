@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useInView } from 'react-intersection-observer'
 import { colorScheme } from 'shared'
 import { IdeaToProfit } from './IdeaToProfit'
 import { MyTitle, MySubTitle } from './MyTitle'
@@ -7,8 +8,9 @@ import { CallMeButton } from './CallMeButton'
 import { Workspace } from './Workspace'
 import { FloatingPictures } from './FloatingPictures'
 import { BusinessCard } from './BusinessCard'
+import { ShowUpSection } from '../shared'
 
-const MainWrapper = styled.section`
+const MainWrapper = styled(ShowUpSection)`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -56,19 +58,23 @@ const ContentContainer = styled.div`
   padding-top: 130px;
 `
 
-export const StartBlock: React.FC = () => (
-	<MainWrapper id='start'>
-		<MainContainerWrapper>
-			<Checkers />
-			<ContentContainer>
-				<IdeaToProfit />
-				<MyTitle />
-				<MySubTitle />
-				<CallMeButton />
-				<Workspace />
-			</ContentContainer>
-			<FloatingPictures />
-			<BusinessCard />
-		</MainContainerWrapper>
-	</MainWrapper>
-)
+export const StartBlock: React.FC = () => {
+	const { ref, inView } = useInView({ triggerOnce: true })
+
+	return (
+		<MainWrapper id='start' ref={ref} inView={inView}>
+			<MainContainerWrapper>
+				<Checkers />
+				<ContentContainer>
+					<IdeaToProfit />
+					<MyTitle />
+					<MySubTitle />
+					<CallMeButton />
+					<Workspace />
+				</ContentContainer>
+				<FloatingPictures />
+				<BusinessCard />
+			</MainContainerWrapper>
+		</MainWrapper>
+	)
+}

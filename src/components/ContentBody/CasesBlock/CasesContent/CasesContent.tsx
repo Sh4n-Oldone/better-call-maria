@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { useInView } from 'react-intersection-observer'
 import { useLangStore } from 'stores'
 import { getCasesCards } from 'utils'
 import { CasesCards } from './CasesCards'
+
+interface IProps {
+	onChangeInView(value: boolean): void
+}
 
 const CasesContentWrapper = styled.div`
   display: flex;
@@ -51,16 +56,22 @@ const ContentContainer = styled.div`
   padding-top: 80px;
 `
 
-export const CasesContent: React.FC = () => {
+export const CasesContent: React.FC<IProps> = ({ onChangeInView }) => {
+	const { ref, inView } = useInView()
 	const currLang = useLangStore((state) => state.langTheme)
 
 	const cards = getCasesCards(currLang)
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	useEffect(() => {
+		onChangeInView(inView)
+	}, [inView])
 
 	return (
 		<CasesContentWrapper>
 			<MainContainer>
 				<Checkers />
-				<ContentContainer>
+				<ContentContainer ref={ref}>
 					<CasesCards cards={cards} />
 				</ContentContainer>
 			</MainContainer>

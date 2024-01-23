@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useLangStore } from 'stores'
 import { getSkillsText } from 'utils'
 import { colorScheme } from 'shared'
 import { SecondaryHeadingText } from 'src/styled'
-import { HeaderWrapper, ModSubtitleText } from '../shared'
+import { HeaderWrapper, ModSubtitleText, ShowUpSection } from '../shared'
 import { SkillsTabs } from './SkillsTabs'
 
-const MainWrapper = styled.section`
+const MainWrapper = styled(ShowUpSection)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,10 +19,15 @@ const MainWrapper = styled.section`
 `
 
 export const SkillsBlock: React.FC = () => {
+	const [inView, setInView] = useState<boolean>(false)
 	const currLang = useLangStore((state) => state.langTheme)
 
+	const onChangeInView = (value: boolean) => {
+		setInView(value)
+	}
+
 	return (
-		<MainWrapper id='skills'>
+		<MainWrapper id='skills' inView={inView}>
 			<HeaderWrapper>
 				<SecondaryHeadingText>
 					{getSkillsText(currLang, 'title')}
@@ -32,7 +37,7 @@ export const SkillsBlock: React.FC = () => {
 				</ModSubtitleText>
 			</HeaderWrapper>
 
-			<SkillsTabs />
+			<SkillsTabs onChangeInView={onChangeInView} />
 		</MainWrapper>
 	)
 }

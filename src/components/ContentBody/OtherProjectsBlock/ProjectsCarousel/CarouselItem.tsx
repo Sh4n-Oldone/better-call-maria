@@ -74,6 +74,10 @@ const ItemTitle = styled.span`
   font-weight: 500;
   line-height: 64px;
   margin-top: 11px;
+
+  @media (max-width: 600px) {
+    font-size: 38px;
+  }
 `
 const ItemSubtitle = styled.span`
   color: #646464;

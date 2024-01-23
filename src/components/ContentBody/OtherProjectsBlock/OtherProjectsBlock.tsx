@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useLangStore } from 'stores'
 import { getOtherProjectsProjects, getOtherProjectsText } from 'utils'
-import { HeaderWrapper, ModSubtitleText } from '../shared'
+import { HeaderWrapper, ModSubtitleText, ShowUpSection } from '../shared'
 import { SecondaryHeadingText } from 'src/styled'
 import { ProjectsCarousel } from './ProjectsCarousel'
 import { Buttons } from './Buttons'
 import { CopyrightFooter } from './CopyrightFooter'
 import { colorScheme } from 'shared'
 
-const MainWrapper = styled.section`
+const MainWrapper = styled(ShowUpSection)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,6 +74,7 @@ const Blob = styled.img`
 
 export const OtherProjectsBlock: React.FC = () => {
 	const [currentItem, setCurrentItem] = useState(0)
+	const [inView, setInView] = useState<boolean>(false)
 	const currLang = useLangStore((state) => state.langTheme)
 	const projects = getOtherProjectsProjects(currLang)
 
@@ -89,8 +90,12 @@ export const OtherProjectsBlock: React.FC = () => {
 		)
 	}
 
+	const onChangeInView = (value: boolean) => {
+		setInView(value)
+	}
+
 	return (
-		<MainWrapper id='projects'>
+		<MainWrapper id='projects' inView={inView}>
 			<BlobWrapper>
 				<Blob src='/blob_mega.png' alt='blob' />
 			</BlobWrapper>
@@ -104,7 +109,11 @@ export const OtherProjectsBlock: React.FC = () => {
 					</ModSubtitleText>
 				</HeaderWrapper>
 
-				<ProjectsCarousel items={projects} currentItem={currentItem} />
+				<ProjectsCarousel
+					items={projects}
+					currentItem={currentItem}
+					onChangeInView={onChangeInView}
+				/>
 			</InnerWrapper>
 
 			<Buttons onNext={handleNextClick} onPrev={handlePrevClick} />

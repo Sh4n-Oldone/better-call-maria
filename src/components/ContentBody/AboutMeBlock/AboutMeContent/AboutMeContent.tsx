@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { ImagesPart } from './ImagesPart'
 import { InfoPart } from './InfoPart'
 
+interface IProps {
+	onChangeInView(value: boolean): void
+}
+
 const ContentContainer = styled.div`
   display: flex;
   gap: 5%;
@@ -15,9 +19,9 @@ const ContentContainer = styled.div`
   }
 `
 
-export const AboutMeContent: React.FC = () => (
+export const AboutMeContent: React.FC<IProps> = ({ onChangeInView }) => (
 	<ContentContainer>
-		<ImagesPart />
+		<ImagesPart onChangeInView={onChangeInView} />
 		<InfoPart />
 	</ContentContainer>
 )

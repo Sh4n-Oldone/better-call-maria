@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { useInView } from 'react-intersection-observer'
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import { useLangStore } from 'stores'
 import { getSkillsTabs } from 'utils'
@@ -9,6 +10,10 @@ import { Methods } from './Methods'
 import { Skills } from './Skills'
 import { Management } from './Management'
 import { Tools } from './Tools'
+
+interface IProps {
+	onChangeInView(value: boolean): void
+}
 
 const TabsWrapper = styled.div`
   display: flex;
@@ -56,10 +61,9 @@ const tabPanelInlineStyle = {
 	paddingBottom: '118px',
 }
 
-// TODO: content switcher by name
-
-export const SkillsTabs: React.FC = () => {
+export const SkillsTabs: React.FC<IProps> = ({ onChangeInView }) => {
 	const [tabIndex, setTabIndex] = useState<number>(0)
+	const { ref, inView } = useInView()
 	const currLang = useLangStore((state) => state.langTheme)
 
 	const tabs = getSkillsTabs(currLang)
@@ -68,10 +72,15 @@ export const SkillsTabs: React.FC = () => {
 		setTabIndex(index)
 	}
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	useEffect(() => {
+		onChangeInView(inView)
+	}, [inView])
+
 	return (
 		<TabsWrapper>
 			<Tabs onChange={handleTabChange} width={'100%'}>
-				<TabList>
+				<TabList ref={ref}>
 					{tabs.map((tab, index) => (
 						<Tab key={tab} style={getTabInlineStyle(index === tabIndex)}>
 							{tab}

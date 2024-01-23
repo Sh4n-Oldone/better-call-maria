@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useLangStore } from 'stores'
-import { HeaderWrapper, SubtitleText } from '../shared'
+import { HeaderWrapper, ShowUpSection, SubtitleText } from '../shared'
 import { SecondaryHeadingText } from 'src/styled'
 import { getCasesText } from 'utils'
 import { colorScheme } from 'shared'
 import { CasesContent } from './CasesContent'
 
-const MainWrapper = styled.section`
+const MainWrapper = styled(ShowUpSection)`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -28,10 +28,15 @@ const ModSubtitleText = styled(SubtitleText)`
 `
 
 export const CasesBlock: React.FC = () => {
+	const [inView, setInView] = useState<boolean>(false)
 	const currLang = useLangStore((state) => state.langTheme)
 
+	const onChangeInView = (value: boolean) => {
+		setInView(value)
+	}
+
 	return (
-		<MainWrapper id='cases'>
+		<MainWrapper id='cases' inView={inView}>
 			<HeaderWrapper>
 				<ModSecondaryHeadingText>
 					{getCasesText(currLang, 'title')}
@@ -41,7 +46,7 @@ export const CasesBlock: React.FC = () => {
 				</ModSubtitleText>
 			</HeaderWrapper>
 
-			<CasesContent />
+			<CasesContent onChangeInView={onChangeInView} />
 		</MainWrapper>
 	)
 }
