@@ -94,7 +94,7 @@ export const CasesCards: React.FC<IProps> = ({ cards }) => {
 						<CardTitle>{title}</CardTitle>
 						<CardSubtitle>{subtitle}</CardSubtitle>
 					</CardHeader>
-					<img src={images[index]} alt='case preview' />
+					<img src={images[index]} alt='case preview' loading='lazy' />
 				</Card>
 			))}
 		</CardsContainer>

@@ -16,6 +16,7 @@ export const MiniDesignSpot: React.FC = () => (
 		<DesignSpotImage
 			src='/projects_design-spot.png'
 			alt='design spot image'
+			loading='lazy'
 		/>
 	</ModMinisContainer>
 )

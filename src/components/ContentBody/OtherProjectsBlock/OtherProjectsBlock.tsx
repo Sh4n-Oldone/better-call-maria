@@ -97,7 +97,7 @@ export const OtherProjectsBlock: React.FC = () => {
 	return (
 		<MainWrapper id='projects' inView={inView}>
 			<BlobWrapper>
-				<Blob src='/blob_mega.png' alt='blob' />
+				<Blob src='/blob_mega.png' alt='blob' loading='lazy' />
 			</BlobWrapper>
 			<InnerWrapper>
 				<HeaderWrapper>

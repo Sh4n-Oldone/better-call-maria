@@ -14,6 +14,10 @@ const CreativeImage = styled.img`
 
 export const MiniCreative: React.FC = () => (
 	<ModMinisContainer>
-		<CreativeImage src='/projects_creative.png' alt='creative image' />
+		<CreativeImage
+			src='/projects_creative.png'
+			alt='creative image'
+			loading='lazy'
+		/>
 	</ModMinisContainer>
 )

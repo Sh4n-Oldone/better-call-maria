@@ -64,7 +64,7 @@ const BigBlob = styled(Blob)`
 
 export const CasesBlobsScreen: React.FC = () => (
 	<MainWrapper>
-		<SmallBlob src='/blob_small.png' />
-		<BigBlob src='/blob_big.png' />
+		<SmallBlob src='/blob_small.png' loading='lazy' />
+		<BigBlob src='/blob_big.png' loading='lazy' />
 	</MainWrapper>
 )

@@ -16,6 +16,6 @@ const ClubImage = styled.img`
 
 export const MiniClub: React.FC = () => (
 	<MainWrapper>
-		<ClubImage src='/projects_club.png' alt='club image' />
+		<ClubImage src='/projects_club.png' alt='club image' loading='lazy' />
 	</MainWrapper>
 )

@@ -129,10 +129,30 @@ const PointerImage = styled(AbsoluteImage)`
 
 export const FloatingPictures: React.FC = () => (
 	<MainWrapper>
-		<ItemsImage src='/random-pics_items.png' alt='items pic' />
-		<LetterImage src='/random-pics_letter.png' alt='letter pic' />
-		<SwitchImage src='/random-pics_switch.png' alt='switch pic' />
-		<ToolboxImage src='/random-pics_toolbox.png' alt='toolbox pic' />
-		<PointerImage src='/random-pics_pointer.png' alt='pointer pic' />
+		<ItemsImage
+			src='/random-pics_items.png'
+			alt='items pic'
+			loading='lazy'
+		/>
+		<LetterImage
+			src='/random-pics_letter.png'
+			alt='letter pic'
+			loading='lazy'
+		/>
+		<SwitchImage
+			src='/random-pics_switch.png'
+			alt='switch pic'
+			loading='lazy'
+		/>
+		<ToolboxImage
+			src='/random-pics_toolbox.png'
+			alt='toolbox pic'
+			loading='lazy'
+		/>
+		<PointerImage
+			src='/random-pics_pointer.png'
+			alt='pointer pic'
+			loading='lazy'
+		/>
 	</MainWrapper>
 )

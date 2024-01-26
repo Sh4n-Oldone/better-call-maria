@@ -17,6 +17,10 @@ const DoggoImage = styled.img`
 
 export const MiniDoggo: React.FC = () => (
 	<MainWrapper>
-		<DoggoImage src='/projects_doggo.png' alt='doggo image' />
+		<DoggoImage
+			src='/projects_doggo.png'
+			alt='doggo image'
+			loading='lazy'
+		/>
 	</MainWrapper>
 )
