@@ -1,8 +1,11 @@
+/* eslint-disable react-refresh/only-export-components */
+import { Suspense, lazy } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { App } from './App'
-import Developer from '../routes/Developer'
-import Case from '../routes/Case'
-import NotFound from '../routes/NotFound'
+
+const Developer = lazy(() => import('../routes/Developer'))
+const Case = lazy(() => import('../routes/Case'))
+const NotFound = lazy(() => import('../routes/NotFound'))
 
 export const router = createBrowserRouter([
 	{
@@ -12,7 +15,11 @@ export const router = createBrowserRouter([
 		children: [
 			{
 				path: '/developer',
-				element: <Developer />,
+				element: (
+					<Suspense fallback={<span>loading</span>}>
+						<Developer />
+					</Suspense>
+				),
 			},
 			{
 				path: '/case/:id',

@@ -12,7 +12,7 @@ const Wrapper = styled.div<{ size: number }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   min-width: calc(100vw - ${({ size }) => size}px);
 `
 const ContentContainer = styled.div`
@@ -34,6 +34,7 @@ const Content = styled.div`
 
 const ContentSwitcher: React.FC<Props> = ({ children }) => {
 	const isMain = useLocation().pathname === '/'
+	const isDeveloper = useLocation().pathname === '/developer'
 
 	if (isMain)
 		return (
@@ -43,6 +44,8 @@ const ContentSwitcher: React.FC<Props> = ({ children }) => {
 				<Footer />
 			</ContentContainer>
 		)
+
+	if (isDeveloper) return <>{children}</>
 
 	return (
 		<ContentContainer>

@@ -418,5 +418,21 @@
         }
       }
     ]
+  },
+  "developer" : {
+    "tabs": [
+      {
+        "RU": "Технологии",
+        "EN": "Technologies"
+      },
+      {
+        "RU": "Обо мне",
+        "EN": "About me"
+      },
+      {
+        "RU": "Контакты",
+        "EN": "Contacts"
+      }
+    ]
   }
 }

@@ -1,9 +1,10 @@
 import React from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useLangStore } from 'stores'
 import { colorScheme } from 'shared'
 import { useScreenSize } from 'hooks'
+import { Langs } from 'types'
 import { FooterLink, getColumns } from './utils'
 import { IconsLinks } from './IconsLinks'
 
@@ -91,6 +92,34 @@ const ColumnLink = styled.li`
     text-align: center;
   }
 `
+const ToDev = styled.button`
+  position: absolute;
+  z-index: 100;
+  bottom: 4px;
+  right: 4px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  font-size: 12px;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
 
 const CustomLinkItem: React.FC<FooterLink> = ({
 	title,
@@ -120,10 +149,18 @@ const CustomLinkItem: React.FC<FooterLink> = ({
 }
 
 export const Footer: React.FC = () => {
+	const navigate = useNavigate()
 	const currLang = useLangStore((state) => state.langTheme)
 	const { width, scrollbarSize } = useScreenSize()
 
 	const columns = getColumns(currLang)
+
+	const toDevLine =
+		currLang === Langs.RU ? '→ А.Павлов, 2024' : '→ A.Pavlov, 2024'
+
+	const handleToDevClick = () => {
+		navigate('/developer')
+	}
 
 	return (
 		<FooterWrapper>
@@ -141,6 +178,7 @@ export const Footer: React.FC = () => {
 					</Column>
 				))}
 			</FooterContentWrapper>
+			<ToDev onClick={handleToDevClick}>{toDevLine}</ToDev>
 		</FooterWrapper>
 	)
 }

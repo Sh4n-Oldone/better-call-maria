@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { CaseRoutes } from 'constants'
 import { ADM, Athena, DHRP, Design } from './Cases'
 
-export const Case: React.FC = () => {
+const Case: React.FC = () => {
 	const { id } = useParams<{ id: CaseRoutes }>()
 
 	switch (id) {
@@ -19,3 +19,5 @@ export const Case: React.FC = () => {
 			return null
 	}
 }
+
+export default Case
