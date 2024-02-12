@@ -2,6 +2,7 @@
 import { Suspense, lazy } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { App } from './App'
+import { DevLoader } from 'components'
 
 const Developer = lazy(() => import('../routes/Developer'))
 const Case = lazy(() => import('../routes/Case'))
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
 			{
 				path: '/developer',
 				element: (
-					<Suspense fallback={<span>loading</span>}>
+					<Suspense fallback={<DevLoader />}>
 						<Developer />
 					</Suspense>
 				),

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useLangStore } from 'stores'
+import { darkLilac } from 'shared'
 import { getDevTabsText } from 'src/utils/getDevText'
 import { DevTabsContent } from './DevTabsContent'
 import { IconsPicker } from './IconsPicker'
@@ -32,6 +33,9 @@ const ContentWrapper = styled.div`
   min-height: calc(100dvh - 60px);
   height: 100%;
   padding: 0 20px;
+  border-width: 0 0 0 2px;
+  border-style: solid;
+  border-image: linear-gradient(to top, rgba(0, 0, 0, 0), ${darkLilac}, rgba(0, 0, 0, 0)) 1 100%;
 `
 
 export const DevTabs: React.FC = () => {

@@ -41,3 +41,7 @@ export const colorScheme = {
     gray: '12px 12px 32px 10px rgba(108, 108, 108, 0.12)',
   },
 }
+
+export const goldColor = '#D4AF37'
+export const darkLilac = '#764d80'
+export const lightSkyAquamarine = '#374CD4'

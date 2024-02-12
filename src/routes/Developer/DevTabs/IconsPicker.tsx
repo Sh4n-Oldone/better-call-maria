@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { darkLilac, goldColor } from 'shared'
 import { ContactsIcon, PersonIcon, TechIcon } from './DevIcons'
 
 interface IProps {
@@ -7,9 +8,6 @@ interface IProps {
 	index: number
 	onClick(index: number): void
 }
-
-const baseColor = '#D4AF37'
-const activeColor = '#764d80'
 
 const DevIconContainer = styled.div<{ isActive: boolean }>`
   display: flex;
@@ -19,11 +17,23 @@ const DevIconContainer = styled.div<{ isActive: boolean }>`
   height: 60px;
   ${({ isActive }) =>
 		isActive &&
-		`border: 2px dotted ${activeColor};
+		`border: 2px dotted ${darkLilac};
   border-radius: 50%;
   border-top: none;
-  border-bottom: none;`}
+  border-bottom: none;
+  transform: scale(1.05);`}
   cursor: pointer;
+
+  &:hover {
+    ${({ isActive }) =>
+			!isActive &&
+			`border: 2px dotted ${goldColor};
+    border-radius: 50%;
+    border-top: none;
+    border-bottom: none;
+    transition: all 0.3s ease;
+    transform: scale(1.05);`}
+  }
 `
 
 const DevIcon: React.FC<{ index: number; color?: string }> = ({
@@ -48,6 +58,6 @@ export const IconsPicker: React.FC<IProps> = ({
 	isActive,
 }) => (
 	<DevIconContainer onClick={() => onClick(index)} isActive={isActive}>
-		<DevIcon index={index} color={isActive ? activeColor : baseColor} />
+		<DevIcon index={index} color={isActive ? darkLilac : goldColor} />
 	</DevIconContainer>
 )
